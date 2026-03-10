@@ -10,7 +10,7 @@ EGEL Lo siguiente estará
 
 ISO 27001 23301
 
-La seguridad de la informacipon es la # PRESERVACIÓN # de la CONFIDENCIALIDAD, INTEGRIDAD y DISPONIBILIDAD
+La seguridad de la información es la PRESERVACIÓN de la CONFIDENCIALIDAD, INTEGRIDAD y DISPONIBILIDAD
 
 Confidenciabilidad: Garantizar que la información solo sea accesible por personas autorizadas
 Integridad: Mantener la exactitud y complenitud de la información, evitando modificaciones no autorizadas (MiTM attack)
