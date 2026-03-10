@@ -5,7 +5,10 @@ powershell->terminal moderna de windows / cmd->terminal antigua
 Variables de sesion--> Sabe donde se encuentra 
 
 EGEL Lo siguiente estará 
-INFORMATION SECURITY / SEGURIDAD DE LA INFORMACIÓN    ISO 27001 23301
+
+# INFORMATION SECURITY / SEGURIDAD DE LA INFORMACIÓN    
+
+ISO 27001 23301
 
 La seguridad de la informacipon es la # PRESERVACIÓN # de la CONFIDENCIALIDAD, INTEGRIDAD y DISPONIBILIDAD
 
