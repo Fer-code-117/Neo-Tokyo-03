@@ -1,0 +1,32 @@
+# Cifrado / Encrypting
+
+A comparación de la codificación donde no resguarda el mensaje el cifrado sí lo hace
+tiempo (T) de decifrado es igual al numero de combinaciones (C) entre velocidad (V) de prueba
+T=C/V
+Ciencia que estudia técnicas para PROTEGER la información mediante la transformación de datos
+
+Simétrica
+Misma llave/clave para cifrar y decifrar
+
+Asimétrica
+Diferentes llaves/clave para cifrar y decifrar 
+
+Algoritmos 
+AES Este se debe usar actualmente 256 Bits
+DES
+Triple DES
+RCA
+
+Plaintext o File +  key + IV -> [AES] -> Cyphertext
+
+  No gastar más en la seguridad de que lo vale el sistema. Hacer una evaluacion de cuanto valdrá el sistema 
+Anlaisis de riesgo, impacto
+
+
+
+
+
+
+
+
+
