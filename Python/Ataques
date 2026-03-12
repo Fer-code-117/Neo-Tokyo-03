@@ -1,0 +1,81 @@
+# Ataque
+Intendo de obtener acceso no autorizado, o de dañar, alterar o interrumpir la confidenciabilidad, integridad o dispnibilidad de los activos de información
+Exploit 
+Método que aprovecha una vulnerabilidad
+Vector de ataques
+Camnio o medio por el que un ataque accede a un sistema (red,aplicaiones web, humanos-social.engineering, suppy chain, etc)
+# Modelos y taxonomía de aataques
+
+Por objetivo: 
+
+  DoS
+    Peticiones de servicio denegada
+  DDoS
+  Peticiones de un servicio denegada distribuidos
+
+Por vector: 
+
+  Red (sniffing,spoofing,MiTM)
+  Host
+POr alcance:
+Por actor
+Por técnica: Explortación de buffer overflow, inyección (SQL, OS)
+
+# Puerto
+NUmero junto con la direccion ip identifica una entrada un a puerta lógica, para que pueda acceder a servicios y recibir conexiones, un puerto abierto hay un proceso o servicio
+que acepta (o responde a) conexiones o datagramas
+
+Socket: Ip + Puerto + Protocolo
+
+Cada app tiene un puero específico
+
+* instalaar ubuntu en terminal wsl instal ubuntu SUDO super administrador hacerlo     apt get hydra
+
+# Ataque de fuerza bruta 
+
+Intenta todas las combinaciones posibles de usuario y contraseña hasta encontrar una válida
+Captcha
+Verificar que el ususario que interectua con un sistema web es ser humano y no un robot automatizando mediante desafios fáciles para personas,
+Evitar el spam en formularios, complementarios o registros
+
+# Hydra 
+curl (como un chrome) visitar una page
+400 error general de usuario
+401 error de no autorizado
+404 
+Ataque a traves de diccionario
+parametro -p pasa un diccionario de un lugar de archivo de texto
+
+# Ataque de inyeccion de sql
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
