@@ -48,6 +48,7 @@ parametro -p pasa un diccionario de un lugar de archivo de texto
 
 # Ataque de inyeccion de sql
 
+interpolar/ concatenar es vulnerable
 
 
 
