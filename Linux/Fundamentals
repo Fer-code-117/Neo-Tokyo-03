@@ -1,0 +1,21 @@
+# Qué es Linux?
+  Es un sistema operativo que se ejecuta en un sistema informático o hardware (ordenador). 
+## Qué es un sistema operativo?
+  Es un software que permite instalar y ejecutar otros programas como procesadores de texto o navegadores web en un ordenador
+## GUI ( Graphic User Interface )
+  Interfaz gráfica de usuario, muestra iconos e imagenes que se pueden selecionar para indicar al dispositivo lo que desea hacer o utilizar. Detrás de la GUI, existe un código que envía el comando al código que indica al sistema que hacer
+## CLI ( Commmand Line Interface )
+  La línea de comandos en Linux es una interfaz basada en texto que acepta comandos que se escriben en ella. Estos comandoas hacen que una acción se ejecute en el sistema operativo del equipo
+## El conocimiento y las capacidades técnicas para analizar, procesar, proteger y transmitir estos datos también está en alta demanda
+## Algunas profesiones que requieren conocimientos Linux
+  Ingeniería de redes: los ingenieros de redes son responsables de administrar los equipos de red que se utilizan para transmitir datos. El conocimiento de Linux es fundamental para los ingenieros de red, ya que más de la mitad de los servidores del mundo están basados en Linux. La mayoría de los sistemas operativos de red se basan en una variación de Linux.
+  Ciberseguridad: los profesionales de la ciberseguridad supervisan e investigan las amenazas a la seguridad de los datos de los sistemas. Linux se utiliza en ciberseguridad para llevar a cabo pruebas de penetración del sistema y evaluar la vulnerabilidad de un sistema.
+  Desarrollo/Programación: los diseñadores y programadores crean aplicaciones informáticas. La línea de comandos de Linux permite a los diseñadores y programadores ejecutar secuencias de comandos; una función que permite al usuario unir comandos para ejecutar acciones complejas en un ordenador. Linux también se utiliza en este campo porque sólo Linux permite a los usuarios acceder a su código fuente (o código source), dándoles la oportunidad de experimentar con el código y aprender mientras lo hacen.
+  Análisis de datos: los científicos y los analistas de datos clasifican y analizan conjuntos de datos para encontrar patrones con el fin de informar y predecir tendencias y comportamientos. Los analistas de datos utilizan Linux debido a la amplia gama de herramientas y comandos disponibles para el análisis de datos, como MySQL y más.
+# Sintaxis de comandos básicos
+  El terminal CLI es una poderosa herramienta que no ayuda a administrar dispositivos pequeños de bajo consumo, servidores de computación de gran capacidad en la nube y más.
+## Qué es un comando?
+  Programa de software que, cuando se ejecuta la CLI, realiza una acción en el ordenador
+  Escribir comando -> SO ejecuta proceso para leer entrada -> Manipula datos -> Produce resultado
+  Un comando ejecuta un procesp en el sistema operativo, que luego hace que el ordenador realice una tarea determinada
+  ls-- Muestra una lista de información sobre archivos
