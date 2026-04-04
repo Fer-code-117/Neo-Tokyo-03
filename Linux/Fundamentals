@@ -19,4 +19,68 @@
   Escribir comando -> SO ejecuta proceso para leer entrada -> Manipula datos -> Produce resultado
   Un comando ejecuta un procesp en el sistema operativo, que luego hace que el ordenador realice una tarea determinada
   ls-- Muestra una lista de información sobre archivos
-  
+  comando [opciones...] [argumentos]
+## Argumentos
+  Sepuede usar para esecificar algo sobre lo que el comando debe actuar
+  ls Documents 
+## Opciones
+  Se pueden uilizar para modificar el comportamiento de un comando
+  ls -l Para obtener un resultado de “pantalla larga”, y proporcionar más información sobre cada uno de los archivos enumerados
+  La letra l para indicar largo (long) o r para invertir (reverse en inglés)
+  ls -r Se imprimirán los resultados en orden alfabético inverso
+## Imprimir el directorio de trabajo
+  pwd Ubicación actual dentro del sistema de archivos
+## Cambio de directorios
+  Los archivos se utilizan para almacenar datos como texto, gráficos y programas.
+  Los directorios son un tipo de archivo utilizado para almacenar otros archivos: proporcionan una estructura organizativa jerárquica
+  cd ( change directory ) Para cambiar y navegar por la estructura del sistema de archivos
+  cd [ opciones ] [ ruta ]
+  cd / Para ir al directorio raíz (root)
+## Ruta path
+  Una ruta es una lista de directorios separados por el carácter /. Por ejemplo, /home/sysadmin
+## Ruta absoluta
+  Le permite especificar la ubicación exacta de un directorio
+  Siempre comienza en el directorio root
+  Por lo tanto, siempre comienza con el carácter /
+## Rutas relativas
+  Ubica un archivo en relación con la ubicación actual del usuario en el sistema de archivos
+  Comienzan con el nombre de un directorio
+Las rutas absolutas comienzan en la raiz de sistema de archivos, las rutas relativas en su ubicación actual
+## Accesos Directos o Atajos
+## Dos puntos ..
+  cd..
+  Independientemente del directorio en el que se encuentre
+  El carácter .. siempre representa un directorio superior en relación al directorio actual
+  A veces denominado directorio padre
+## Un punto .
+  Independientemente del directorio en el que se encuentre
+  El carácter . siempre representa su directorio actual
+## El símbolo ~
+  El directorio principal del usuario actual está representado por el carácter ~
+  cd ~
+# Listados de archivos
+  El comando ls se utiliza para enumerar el contenido de un directorio
+  ls [ opciones ] [ archivo ]
+  De forma predeterminada, el comando ls usado sin opciones o argumentos mostrará los archivos contenidos en el directorio actual
+## Tipo de archivo
+  Símbolo	  Tipo de archivo	      Descripción
+  d	        directorio	          Un archivo usado para contener otros archivos.
+  -	        archivo ordinario	    Incluye archivos leíbles, imágenes, archivos binarios, y archivos comprimidos.
+  l	        enlaces simbólicos	  Apunta a otro archivo.
+  s	        socket	              Permite la comunicación entre procesos.
+  p	        tubería (pipe)	      Permite la comunicación entre procesos.
+  b	        archivo bloque	      Usado para comunicaciones con el equipo (hardware).
+  c	        archivo carácter	    Usado para comunicaciones con el equipo (hardware).
+## Permisos
+   Indican cómo determinados usuarios pueden acceder a un archivo
+
+
+
+
+
+
+
+
+
+
+
