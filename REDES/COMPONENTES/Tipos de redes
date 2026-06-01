@@ -1,0 +1,51 @@
+Hay redes de todo tamaño
+## Redes domésticas pequeñas
+  Las redes domésticas pequeñas conectam algunas computadoras entre sí y a internet
+## Redes domésticas/de oficimas pequeñas
+  La red SOHO permite que las computadoras en una oficina hogareña o remota se conecten a una red corporativa o accedan a recursos compartidos centralizados
+## Redes medianas a grandes
+  Las redes medianas a grandes, como las que se utilizan en corporaciones y escuelas, pueden tener muchas ubicaiones con ciertos o miles de hosts interconectados
+## Redes mundiales
+  Internet es una red de redes que conecta cientos de millones de computadoras en el mundo
+
+# LAN Y WAN
+Las infraestructuras de red pueden variar en gran medida en términos de :
+  -El tamaño del área que abarcan
+  -La cantidad de usuarios conectados
+  -La cantidad y los tipos de servicios disponibles
+  -El área de responsabilidad
+Los dos tipos más comunes de infraestructura de red son las redes de área local (LAN) y las redes de área amplia (WAN)
+## LAN
+  Es una infraestructura de red que proporciona acceso a usuarios y dispositivos finales en un área geográfica pequeña. Se utiliza en un departamento dentro de un a    empresa, un hogar o una red de pequeñas empresas.
+  ## Características
+  -Las LAN Interconectan terminales en un área limitada
+  -Por lo general, la administración de las LAN está a cargo de una única organización o persona. El control administrativo se aplica a nivel de red y rige las políticas de seguridad y control de acceso
+## WAN
+  Es una infraestructura de red que proporciona acceso a otra redes en un área geográfica amplia, que generalemnte es propiedad y está administrada por una corporación más grande (Proveedores de servicio-SP) o un provedor de servicios de telecomunicaiones (Proveedores de servivios de Internet-ISP) 
+  ## Características
+  -Las WAN interconectan LAN a través de áreas geográficas extensas (ciudades, estados, provincias, países o continentes)
+  -La administración de las WAN está a cargo de varios proveedores de servicios
+  -Normalmente, las  WAN proporcionan enlaces de velocidad más lenta entre redes LAN
+
+# El Internet
+Internet es una colección global de redes interconectadas (internetworks) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
