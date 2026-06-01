@@ -1,0 +1,94 @@
+# Tecnologías de acceso a Internet
+Los usuarios domésticos, trabajadores remotos y las oficinas pequeñas requieren una conexión a un ISP para acceder a Internet. Las opciones de conexión más utilizadas incluyen banda ancha por cable, banda ancha por línea de suscriptor digital (DSL), redes WAN inalámbricas y servicios móviles
+Las organizaciones generalmente necesitan acceso a otros sitios corporativos, asi como a Internet. Para admitir servicios empresarales, como telefonía IP, video conferencias y almacenamiento en centros de datos, se requieren conexiones rápidas. 
+Los SPS ofrecen interconexiones de clase empresarial
+Los servicios de nivel empresarial más comunes son DSL empresarial, líneas arrendadas y red Metro Ethernet
+
+# Conexiones a Internet domésticas y de oficinas pequeñas
+  ## Cable  
+    Ofrecido por los proveedores de servicio de televisión por cable
+    La señal de datos de Internet se transmite en el mismo cable que ofrece la terlevisión por cable
+    Proporciona un ancho de banda, alta disponibilidad y una conexión a Internet siempre activa
+  ## DSL
+    Proporciona un gran ancho de banda, alta disponibilidad y conexión  permanente a Internet
+    DSL se transporta por la línea de teléfono, usualmente los usuarios se conectan a una línea de suscriptor digital asimétrica (ADSL), esto implica que la velocidad de descrga es mayor que la velocidad de carga
+  ## Celular
+    El acesso a Internet utiliza una red de telefonía celular para conectarse siempre y cuando tenga cobertura de telefonía móvil, puede tener acceso a Internet
+    El rendimiento está limitado por las capacidades del teléfono y la torre celular a la que está conectado
+  ## Satelital
+    La disponibilidad de acceso a Internet satelital es un beneficio en aquellas áreas que de otra manera no tendrían conectividad a Internet. 
+    Las antenas parabólicas requieren una línea de vista despejada al satélite
+  ## Telefonía Dial-ip
+    Opción de bajo costo que funciona con cualquier línea telefónica y un módem. 
+    Ancho de banda bajo y por lo general, no es suficiente para transferencias de datos masivas.
+La oferta de opciones de conexión varía según la ubicaión geográfica y la disponibilidad de proveedores de servicios
+
+# Conexiones a Internet empresariales
+Es posibleque las empresas requieran un ancho de banda mayor y dedicado, además de servicios administrativos.
+  ## Líneas arrendadas dedicadas
+    Son circuitos reservados dentro de la red del proveedor de servicios que conectan oficias separadas geográficamente para redes privadas de voz y / o datos
+    Los cicuitos se alquilan a una tasa mensual o anual
+  ## Metro Ethernet (Ethernet WAN)
+    Extienden la tecnología de acceso LAN a la WAN
+  ## DSL empresarial
+    Tiene disponible varios formatos, una de ellas es la línea de suscripción digital simétrica (SDSL), proporciona las mismas velocidades de subida y descarga
+  ## Satelital
+    Puede proporcionar una conexión cuando una solución por cable no está disponible
+Las opciones de conexión varían según la ubicación geográfica y la disponibilidad del proveedor de servicios.
+
+# La red convergente
+## Redes separadas tradicionalmente
+  Redes separadas no pueden comunicarse entre sí.  
+  Cada red utilizaba tecnologías diferentes para transportar la señar de comunicación
+  Cada red tenía su propio conjunto de reglas y estándares para asegurar una comunicación satisfactoria
+  Múltiples servicios se ejecutaron en múltiples redes
+## Redes convergentes
+  Pueden transmitir datos, voz y vídeo entre muchos tipos diferentes de dispositivos en la misma infraestructura de red
+  Esta infraestructura de red utiliza el mismo conjunto de reglas, acuerdos, estándares de implementación
+  Los datos convergentes transportan servicios múltiples en una red
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
