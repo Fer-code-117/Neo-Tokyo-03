@@ -43,7 +43,9 @@ Terminología especializada para describir cómo cada uno de estos dispositivos 
 # Diagramas de topología
 Proporcionan un mapa visual que muestra cómo está conectada la red. Hay dos tipos de diagramas de topología. físicos y lógicos.
   ## Diagrama de topologías físicas
-    
+  Ilustran la ubicaión física de los dispositivos intermedios y la instalación del cable
+  ## Diagrama de topologías lógicas
+  Ilustran los dispositivos, los puertos y el esquema de direccionamiento de la red.
 
 
 
