@@ -1,2 +1,69 @@
-Representaciones de red
+# Representaciones de red
 Los diagramas de red a menudo se usan símbolos, para ver fácilmente qué componentes se conectan con otros componentes, dónde se ubicarán y cómo se conectarán
+Dispositivos finales
+##Dispositivos Finales
+PC Escritorio          Laptop               Teléfono IP          Tablet               Impresora
+ ___________          .----------.          .-------.           .-------.            ._________.
+|  _______  |        /  ________ \         |  [::] |            |       |            |  _______ |
+| |  ___  | |       /  |        | \        |  ====  |           |       |            | | ||||| ||
+| | |   | | |      /   |________|  \       |  ____  |           |_______|            | |_____| ||
+| |_|___|_| |     /    |________|   \      | /    \ |           |_[___]_|            |_________|
+|___________|    /___________________\     |  ----  |                                [_________]
+ [_________]    [_____________________]    | [____] |
+                  [_] [___________] [_]    |________|
+## Dispositivos Intermediarios
+Router                Switch LAN            Firewall
+  .-----.              .---------.          .-----------.
+ /  [~] \             | o o o o  |          |  |=====|  |
+|  .---.  |           | o o o o  |          | /       \ |
+|  |   |  |           |__________|          ||  x x x  ||
+|  '---'  |           [__________]          ||_________|
+ \_______/            |||||||||             | [_______] |
+ /|  |  |\            |||||||||             |___________|
+/_|__|__|_\
+##  Medios de Red
+Inalámbrico          LAN (Cable)            WAN (Nube/Fibra)
+   (  (  )  )         A----B----C            .-~~~~~~~~~~-.
+  (  (  )  )          |    |    |           (  ~  ~  ~  ~  )
+ (   wifi   )         |    |    |          ( ~  Internet  ~ )
+  (  (  )  )         [A]  [B]  [C]          (  ~  ~  ~  ~  )
+   (  (  )  )                                '-~~~~~~~~~~-'
+    [device]          ===Ethernet===         )))----[A]----)))
+
+Un diagrama proporcina una manera fácil de comprender cómo se conectan los dispositivos en una red grande. Este tipo de representación de una red se denomina DIAGRAMA DE TOPOLOGÍA .
+La capacidad de reconocer las representaciones lógicas de los componentes físicos de la red es fundamental para poder visualizar la organización y el funcionamiento de una red.
+Terminología especializada para describir cómo cada uno de estos dispositivos y medios se conectan entre sí.
+## Tarjeta de interfaz de red (Network interface Card-NIC) 
+  Una NIC conecta físicamente el dispositivo final a la red.
+## Puerto físico
+  Un conector o conexión en un dispositivo de red donde se conectan los medios a un terminal u otro dispositivo de red
+## Interfaz
+  Puertos especializados en undispositivo de red que se conectan a redes individuales. Debido a que los rputers conectan redes, los puestos en un router se denominan interfaces de red.
+
+# Diagramas de topología
+Proporcionan un mapa visual que muestra cómo está conectada la red. Hay dos tipos de diagramas de topología. físicos y lógicos.
+  ## Diagrama de topologías físicas
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
