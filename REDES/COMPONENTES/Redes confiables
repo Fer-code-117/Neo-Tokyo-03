@@ -1,1 +1,71 @@
 # Arquitectura de red
+La función de la red cambió de una red únicamente de datos a un sistema que permite conectrar a personas, dispositivos e información en un entorno de red convergente y con gran variedad de medios.
+Para que las redes funcionen eficazmente y crezcan en un entorno, se debe de crear sobre la base de una arquitectura de red estándar
+Las redes admiten:
+  Amplia gama de aplicaiones 
+  Servicios
+Operan en diferentes cables y dispositivos, que conforman la estructura física
+La arquitectura de red, se refiere a las tecnologías que dan soporte a la infraestructura y a los servicios y las reglas, o protocolos, programadoas que trasladan los datos a través de la red
+## Cuatro caracteristicas básicas que los arquitectos de redes deben abordar para cumplir las expectativas del usuario
+  -Tolerancia a fallas
+  -Escalabilidad
+  -Calidad de servicio
+  -Seguridad
+## Tolerancia a fallas
+  Limita la cantidad de dsipositivos afectados durante una falla . 
+  Está contrsuido para permitir una recuperacion rápida
+  Si la ruta falla, los msj se pueden enviar inmediatamente por otro enlace
+  Rutas que conducen a un destino se denomina REDUNDANCIA  
+  La implementación de una red de packet-switched es una forma en que las redes confiables proporcionan redundancia  
+  La conmutación de paquetes divide el tráfico en paquetes que se enrutam a través de una red compartida (Un msj/email/vídeo, se divide en múltiples bloques de msj,    llamados paquetes)
+  Las conexiones redundantes permiten usar rutas alternativas cuadno falla un dispositivo o un enlace. La experiencia del usuario no se ve afectada
+## Escalabilidad
+  Una red escalable se expande rápidamente para admitir nuevos usuarios y aplicaiones, sin degradar el rendimietno de los servicios a los que están accediendo los      usuarios existentes
+  Son escalables, porque los diseñadores siguen los estándares y protocolos aceptados
+  Se pueden conectar a Internet redes enteras y usuarios adicionales sin degradar el rendimiento de los usuarios existentes
+## Calidad de servicio
+  Mecanismo principal para administrar la congestión y garantizar el envío confiable de contenido a todos los usuarios
+  La congestión se produce cuando la demanda de ancho de banda excede la cantidad disponible
+  El ancho de banda de la red es la medida de la cantidad de bits que se pueden transmitir en un segundo (bps)
+  Cuando el volumen de tráfico es mayor de lo que se puede transportar en la red, los dispositivos colocan los paquetes en cola de la memoria hasta que haya recursos
+  disponibles para transmitirlos
+  Con una política QOS, el router puede administrar el flujo de datos y el tráfico de voz, dando prioridad a las comunucaciones de voz si  la red se congestiona
+  La calidad de serviciio, que administra el router, garantiza que las prioridades coincidan con el tipo de comunicaipon y su importancia para la organización
+## Seguridad de la red
+  La infraestructura de red, los servicios y los datos contenidos en los dispositivos conectados a la red son activos y personales muy importantes.
+  Los administradores de red deben abordar dos tipos de problemas de seguridad de red:
+    Seguridad a la infraestructura: Asegurar físicamente los dispositivos que proporcionan conectividad de red
+    Seguridad de la información: Evitar el acceso no autorizado al software de administración
+  Los administradores pueden proteger la red con seguridad de hardware y software, y evitando el acceso físico a los dispositivos de red
+  Las medidas de seguridad protegen la red de accesos no autorizados (Correo-Contraseña)
+  Los administradores de red también deben proteger la información contenida en los paquetes que se transmiten a través de la red y la infomación almacenada en los dispositivos conectados a la red
+## Requisitos principales para alcanzar los objetivos de seguridad de la red
+  -Confidencialidad
+    Se refiere a que solamente los destinatarioa deseados y autorizados pueden acceder a los datos y leerlos
+  -Integridad
+    Tener la seguridad de que la información no se va a alterar en la transmisión, del origen al destino
+  -Disponibilidad
+    Tener la seguridad de acceder em forma confiable y oportuna a los servicios de datos para los usuarios autorizados
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
