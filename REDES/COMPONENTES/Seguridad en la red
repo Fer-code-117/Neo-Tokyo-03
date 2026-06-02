@@ -1,0 +1,57 @@
+# Amenazas de seguridad
+La seguridad de la red debe ser capaz de proteger los datos al mismo tiempo que permite la calidad de servicio que los usuarios esperan de la red. Debe de tener en cuenta el entorno, así como las herramietas y requisitos de la red
+
+Asegurar una red implica protocolos, tecnologías, dispositivos, herramientas y técnicas para proteger los datos y mitigar las amenazas
+Existen varias amenazas externas comunes a las redes:
+  -Virus, gusanos y caballos troyanos
+    Estos contienen software malicioso o código que se ejecuta en un dispositivo de usuario
+  -Spyware y adware
+    Tipos de software que se instalan en el dispostivo de un usario. El software recopila en secreto información sobre el       usuario
+  -Ataques día cero
+    Se producen el primer día que se conoce una vulnerabilidad
+  -Amenazas de ataques
+    Una persona malintencionada ataca dispositivos de usuario o recursos de red
+  -Ataques por denegación de servicio
+    Estos ataques ralentizan o bloquean las aplicaciones y procesos en un dispositivo de red
+  -Intercepción y robo de datos
+    Este ataque captura información privada de la red de una organización 
+  -Robo de identidad
+    Este ataque roba las credenciales de inicio de sesión de un usuario para acceder a datos privados
+
+# Soluciones de seguridad
+La seguridad debe implementarse en varias capas, y debe utilizarse más de una solución de seguridad, si un componente de seguridad no puede identificar y proteger, los otros pueden tener éxito
+Componentes básicos de seguridad para una red doméstica o de oficina pequeña
+  -Antivirus y antispyware
+    Estas aplicaiones ayudan a proteger los dispositivos finales para que no se infecten con software malicioso
+  -Filtrado de firewall
+    Bloquea el acceso no autorizado dentro y fuera de la red
+La implementación de seguridad de la red de redes de las empresas normalmente consiste en la integración de numerosos componentes a la red para controlar y filtrar el tráfico
+Tienen otros requisitos de seguridad además de los mencionados
+  -Sistemas de firewall dedicados
+    Proporcionan capacidades de firewall más avanzadas que pueden filtrar grandes cantidades de tráfico con más               granularidad
+  -Listas de control de acceso (ACL)
+    Estas filtran aún más el acceso y el reenvío de tráfico en función de las direcciones IP y las aplicaciones
+  -Sistema de prevención de intrusiones (IPS)
+    Estos identifican amenazas de rápida propagación, como ataques de día cero o de horas cero
+  -Redes privadas virtuales (VPN) 
+    Estos proporcionan acceso seguro a una organización para trabajadores remotos
+La solución de seguridad implementada debe poder adaptarse a las crecientes tendencias de red, en constante cambio
+Comprender claremente la infraestructura de Switichiny routing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
