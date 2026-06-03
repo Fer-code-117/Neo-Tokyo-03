@@ -1,0 +1,75 @@
+# Modos de comando principales
+Todos los dispositivos de red requieren un sistema operativo y que se pueden configurar mediante:
+  CLI: Proporciona al administrador de red un     control y flexibilidad más precisos que el      uso de la GUI
+  GUI
+Como característica de seguridad, el software IOS de CISCO divide el acceso de administración en los siguientes dos modos de comando
+
+## Modo de ejecución de usuario
+Capacidades limitadas de comandos de monitoreo básico
+Útil en el caso de algunas operaciones básicas
+NO permite la ejecución de ningún comando que podría cambiar la configuración del dispositivo
+Elmodo EXEC del usuario se puede reconocer por la petición de entrada de la CLI que termina con el símbolo >
+A menudo se le conoce como un modo de visualización solamente
+
+## Modo de ejecución privilegiado
+Para ejecutar comandos de configuración y funciones, un administrador de redes debe acceder al modo de ejecución privilegiado
+EL modo EXEC con privilegios se puede reconocer por la petición de entrada que termina con el símbolo #
+
+# Modo de configuración y modos de subconfiguración
+Para configurar el dispositivo, el usuario debe de ingresar el modo de configuración global
+Ahí se realizan cambios en la configuración de la CLI que afectan la operación del dispositivo en su totalidad
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
