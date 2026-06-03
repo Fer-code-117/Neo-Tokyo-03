@@ -1,1 +1,69 @@
+#OS
+La parte del Sistema Operativo que interactúa directamente con el Hardware de la PC se le conoce como KERNEL
+La parte que interactúa con las aplicaciones y el usuario se conoce como SHELL
+El usuario puede interactuar con el shel mediante la interfaz de línea de comando (CLI) o la interfaz gráfica del usuario (GUI)
+=================\
+      SHELL        \
+=================    \
+      KERNEL           == INTERFAZ DE USUARIO
+=================    /
+     HARDWARE      /
+=================/
+  -Shell
+    La interfaz de usuario que permite a los usuarios solicitar tareas específicas del        equipo. Estas solicitudes se pueden realizar a través de las interfaces CLI
+  -Kernel
+    Establece ña comunicación entre el hardware y el software de una computadora y            administra el uso de los recursos de hardware para cumplir los requisitos del software
+  -Hardware
+    La parte física de una computadora, incluida la electrónica subyacente
+
+# GUI
+Una GUI como
+Windows
+macOS
+LinuxKDE
+Apple IOS
+Android
+Permite al usuario interactuar con el sistema utilizando un entorno de iconos gráficos, menús y ventanas
+Las GUI no siempre pueden proporcionar todas las funcionalidades disponibles que hay en la CLI. 
+También pueden
+  Fallar-Colapsar-No operar como se les indica
+Se suele acceder a los dispositivos de red mediante una CLI
+La CLI consume menos recursos y es muy estable en comparación con una GUI
+El sistema operativo que usa CISCO en muchos de sus dispositivos se llama CISCO INTERNETWORK OPERANTING SYSTEM (IOS)
+CISCO IOS se utiliza en muchos routers y switches de CISCO
+Otros Sistemas operativos de CISCO incluyen IOS XE,IOS XR y NX-OS
+El sistema operativo de los routers domésticos generalmente se denomina firmware. El método más frecuente para configurar un router doméstico consiste en utilizar un explorador web para acceder a una GUI
+
+# Propósitto del OS
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
