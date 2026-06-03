@@ -45,11 +45,49 @@ Un OS basado en CLI como CISCO IOS en un switch o router, permite que un técnic
       Vea resultafdos en un monitor
 
 # Métodos de acceso
+Un switch reenviará el tráfico de forma predeterminada y no necesita configurarse explícitamente para funcionar 
+Todos los Switches deben estar configurados y protegidos
+
+## Consola
+ Es un puerto de administración físico que proporciona acceso fuera de banda a un dispositivo CISCO
+ Acceso fuera de banda: Acceso por un canal de adminstración exclusivo que se usa únicamente con fines de mantenimiento del dispositivo
+ Ventaja del puerto de consola
+El dispositivo es accesible incluso si no hay servicios de red configurados, como realizar la configuración inicial 
+Para una conexión de consola se requiere:
+   Un equipo con software de emulación de terminal 
+   Un cable de consola especial para conectarse al dispositivo
+
+## Secure SHELL (SSH)
+Método para establecer de manera remota una conexión CLI segura a través de una interfaz virtual por medio de una red
+Requieren Servicios de red activos en el dispositivo, incluida una interfaz activa configurada con una dirección
+
+## Telnet
+Método inseguro para establecer una sesión CLI de manera remota a través de una interfaz virtual por medio de una red
+No proporciona una conexión segura y encriptada y solo debe usarse en un entonrno de laboratorio
+La autenticación de usuario, las contraseñas y los comandos se envían por la red en texto simple
+
+# Programas de emulación de terminal
+Existen varios programas de emulación:
+PuTTY
+Tera Term
+SecureCRT
+Permiten aumentar la productividad mediante ajustes del tamaño de la ventana, modificadores de los tamaños de fuentes y cambios de esquemas de colores
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+  
 
 
 
