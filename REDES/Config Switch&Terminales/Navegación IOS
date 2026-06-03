@@ -18,6 +18,66 @@ EL modo EXEC con privilegios se puede reconocer por la petición de entrada que 
 # Modo de configuración y modos de subconfiguración
 Para configurar el dispositivo, el usuario debe de ingresar el modo de configuración global
 Ahí se realizan cambios en la configuración de la CLI que afectan la operación del dispositivo en su totalidad
+El modo de congiruración global se identifica mediante un mensaje que termina (config)# después del nombre del dispositivo,como Switch(config)#
+Desde el modo de configuración global, el usuario puede ingresar a diferentes modos de subconfiguración
+Dos modos de subconfiguración comunes incluyen:
+   -Modo de configuración de líneas
+     Se utiliza para configurar la consola,          SSH, Telnet o el acceso auxiliar
+   -Modo de configuración de interfaz
+     Se utiliza para configurar un puerto de         switch o una interffaz de red de router
+Cuando se utiliza la CLI, el modo seidentifica mediante la línea de comandos que es exclusiva de ese modo
+Cada petición de entrada empieza con el nombre del dispositivo
+El resto de la petición de entrada indica el modo
+Por ejemplo. 
+Modo de configuracion de líneas es: Switch(config-line)#
+Modo de configuración de interfaz
+Switch(config-if)#
+
+##Comandos
+Switch>enable Configuración con privilegios
+Switch# disable Quitar privilegio
+Switch>enable
+Switch#configure terminal
+Switch(config)# exit salir 
+Switch(config)#line console 0 Comando se subconciguracion para el puerto de consola
+Switch(config-line)# exit
+Switch(config)#
+Switch(config)# line vty 15 Modo de subconfiguración de línea VTY 
+Switch(config-line)#
+Switch(config-line)# exit
+Switch(config)#
+Switch(config)#interface vlan 1 Modo de interfaz VLAN 1
+Switch(config-if)#
+Switch(config-if)# line console 0 Cambiar a modo de subconfiguración de la consola delinea
+Switch(config-if)#
+Switch(config-if)# end Regresa al modo EXEC
+Switch#
+Otro comando que devuelve al símbolo EXEC privilegiado es 
+CTRL+Z
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
