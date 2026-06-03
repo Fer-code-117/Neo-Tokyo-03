@@ -35,9 +35,16 @@ Otros Sistemas operativos de CISCO incluyen IOS XE,IOS XR y NX-OS
 El sistema operativo de los routers domésticos generalmente se denomina firmware. El método más frecuente para configurar un router doméstico consiste en utilizar un explorador web para acceder a una GUI
 
 # Propósitto del OS
+Un OS de PC permite que el usuario realice lo siguiente:
+      Utilice un mouse para hacer selecciones y ejecutar programas
+      Introduzca texto y comandos de texto
+      Vea resultados en un monitor
+Un OS basado en CLI como CISCO IOS en un switch o router, permite que un técnico de red realice lo siguiente:
+      Utilice un teclado para ejecutar programas de red basados en la CLI
+      Utilice un teclado para introducir texto y comandos basado en texto
+      Vea resultafdos en un monitor
 
-
-
+# Métodos de acceso
 
 
 
