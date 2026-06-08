@@ -1,0 +1,155 @@
+# Nombres de los dispositivos
+El primer comando de configuración en cualquier dispositivo debe ser darle un nombre de disposivito único o nombre de host
+El nombre de host proporciona la confirmación de que está conectado al dispositivo correcto
+El nombre predeterminado debe cambiarse a algo más descriptivo
+  Comenzar con una letra
+  NO contener espacios
+  Finalizar con una letra o dígito
+  Utilizar únicamente letras, dígitos y guiones
+  Tener menos de 64 caracteres de longitud
+Una organización debe elegir una convención de nomenclatura que haga que sea fácil e intuitivo identificar un dispositivo específico
+La documentación de red debe explicar como se seleccionaron estos nombres para que se pueda seguir el mismo criterio en la denominación de los dispositivos adicionales
+Después de que se haya identificado la convención de nomneclatura, el siguiente paso es usar la CLI para aplicar los nombres a los dispositivos
+Switch>
+Switch>enable
+Switch#
+Switch#configure terminal
+Switch(config)#
+Switch(config)# hostname SW-Floor-1
+Switch(config)#
+El comando hostname para dar nombre al dispositivo
+El comando no hostname para devolver el nombre del dispositivo al indicador predeterminado
+
+# Pautas de las contraseñas
+El uso de las contraseñas débiles o fácilmente adivinadas sigue siendo la mayor preocupación de seguridad de las organizaciones
+Los dispositivos de res siempre deben tener contraseñas configuradas para limitar el acceso administrativo
+
+CISCO IOS puede configurarse para utilizar contraseñas en modo jerárquico y permitir diferentes privilegios de acceso al dispositivo de red
+Todos los dispositivos de red deben limitar el acceso administrativo asegurando EXEC privilegiado, EXEC de usuario y acceso Telnet remoto con contraseñas. Con contraseñas encriptadas y deben proporcionarse notificaciones legales
+Puntos clave a considerar al elegir las contraseñas:
+  Use contraseñas que tengan más de ocho caracteres de longitud
+  Use una combinación de letras mayúsculas y minúsculas, numeros enteros, caracteres             especiales o secuencias numéricas
+  Evite el uso de la misma contraseña para todos los dispositivos
+  No use palabras comunes porque se adivinan fácilmente
+
+# Configuración de contraseñas
+Cuando se conecta inicialmente a un dispositivo, en encuentra en modo EXEC de usuario. Este modo está protegido usando la consola
+Para porteger el acceso al modo EXEC del usuario, introduzaca el modo de configuracipon de la consola de línea mediante el comando de configuración line consolo 0 global. como se muestra en el ejemplo. El 0 se utiliza para representar la primera interfaz de consola, Luego, configure la contraseña de modo EXECde usuario con el comando password* password~ 
+Finalmente, habilite el acceso EXEC de usuario con el comando login
+SW-Floor-1# configure terminal
+SW-Floor-1(conf)# line console 0
+SW-Floor-1(conf-line)# password cisco
+SW-Floor-1(conf-line)# login
+SW-Floor-1(conf-line)# end
+SW.Floor-1#
+El acceso a las consola ahora requerirá una contraseña antes de permitir el acceso al modo EXEC del usuario
+Para tener acceso de administrador a todos los comandos del IOS, incluida la config de un device, debe obtener acceso en modo EXEC privilegiado. Es el método de acceso más importante porque proporciona acceso completo al device
+Para asegurar el acceso privilegiado a EXEC, usamos el comando enable secret pasword global config, como se muestra
+Sw-Floor-1# configure terminal
+Sw-Floor-1(config)# enable secret class
+Sw-Floor-1(config)# exit
+Sw-Floor-1#
+Las líneas de terminal virtual (VTY) permiten el acceso remoto mediante Telnet o SSH al dispositivo.  Muchos Sw de CISCO admiten hasta 16 lpineas VTY que se numeran del 0 al 15
+Para proteger las VTY, introduzca el modo VTY de línea mediante el comando line cty 0 15 global config. Luego, especifique la contraseña de VTY con el comando password password 
+Por último, habilite el acceso a VTY con el comando login
+Sw-Floor-1# configure terminal
+Sw-Floor-1(config)# line vty 0 15
+Sw-Floor-1(config-line)# password cisco
+Sw-Floor-1(config-line)# login
+Sw-Floor-1(config-line)# exit
+Sw-Floor-1#
+
+# Encriptación de las contraseñas
+Los achivos startup-config y running-config muestran la mayoría de las contraseñas en texto simple. Esta es una amenaza de la seguridad porque cualquiera puede descubrir ñas contraseñas si tiene acceso a estos archivos
+Para encriptar todas las contraseñas de texto sin formato, utilice el comando service passwors-encryption global config, como se muestra
+Sw-Floor-1# configure terminal
+Sw-Floor-1(config)# service password-encryption
+Sw-Floor-1#
+El comando aplica un cifrado débil a todas las contraseñas no encriptadas. Esta encriptación solo se aplica a las contraseñas de los archivos de configuración; no a las contraseñas mientras se envían a través de los medios. El propósito de este comando es evitar que individuos no autorizados vean las contraseñas en el archivo de configuración
+show running-config Use el comando para verificar que las contraseñas entén ahora encriptadas
+Sw-Floor-1(config)# end
+Sw-Floor-1# show running-config
+!
+(Output omitted)
+!
+line 0 
+password 7 45a56asa78as6a
+login
+!
+line vty 0 4
+ password 7 09aw84as5qe36
+login
+line vty 5 15 
+password 7 09aaksaa575
+login
+!
+!
+end
+
+# Mensaje de aviso
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
