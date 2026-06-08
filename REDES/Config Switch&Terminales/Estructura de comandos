@@ -1,0 +1,95 @@
+# Estructura básica del comando IOS
+Un administrador de red debe conocer la estructura de comandos básica del IOS para poder usar la CLI para la configuración del dispositivo
+Switch>        show                     ip protocols                       Switch>show ip protocols
+  |              |              |              |
+Indicador      Comando        Espacio      Palabra clave/argumento
+  |              |              |              |      
+Switch>         ping                     192.168.10.5                       Switch>ping 192.168.10.5
+
+Palabra clave (keyword): Parámetro específico definido en el sistema operativo
+Argumento: Esto no está predefinido; es un valor o variable definida por el usuario
+
+## Comprobación de la sintaxis del comando de IOS
+Un comando podría requerir uno o más argumentos. Consultar la sintaxis de comandos, está proporciona el patrón o el formato que se debe utilizar cuando se introduce un comando
+Conveción    Descripción
+negrita*      Indica los comandos y las palabras clave que ingresa literalmente como se muestra 
+cursiva~      Indica los argumentos para los cuales el usuario proporciona el valor
+[x]          Los corchetes indican un elemento opcional (palabra clave o argumento)
+{x}          Las llaves indican un elemento oblgatorio (palabra clave o argumento)
+[x{y|z}]     Las llaves y las líneas verticales entre corchetes indican que se requiere dentro de un elemento opcional. Los espacios se              utilizan para delinear claramente partes del comando
+Por ejemplo, la sintaxis para utilizar el description* comando es description* string~. El argumento es un valor string proporcionado por el usuario. description El comando se usa típicamente para identificar el propósito de una interfaz. Por ejemplo, al ingresar el comando, (description Connects to the main headquarter office switch)*, se describe dónde se encuentra el otro dispositivo al final de la conexión.
+Los siguientes ejemplos muestran algunas convenciones utilizadas para registrar y usar comandos de IOS:
+ping* ip-address~ - The command is ping* and the user-defined argument is the ip-address of the destination device. For example, ping 10.10.5.*
+traceroute* ip-address~ - The command is traceroute* and the user-defined argument is the ip-address of the destination device. For example, traceroute 192.168.254.254.*
+Switch(config-if)# switchport port-security aging {  static | time time |     type   {absolute | inactivity}
+El comando normalmente se seguirá una descripción detallada del comando y cada argumento.
+La referencia de comando de Cisco IOS es la última fuente de información para un comando de IOS en particular
+
+## Funciones de ayuda de IOS
+Tiene dos formas de ayuda disponibles: Ayuda contextual y el verificador de sintaxis de comando
+La ayuda contextual le permite encontrar rápidamente respuestas a estas preguntas:
+¿ Qué comandos están disponibles en cada modo de comando?
+¿ Qué comandos comienzan con caracteres específicos o grupo de caracteres?
+¿ Qué argumentos y palabras clave están disponibles para comandos particulares?
+Para acceder a la ayuda contextual, simplemente ingrese un signo de interrogación, en la CLI. ?
+La verificación de la sintaxis del comando comprueba que el usuario haya introducido un comando válido. Cuando se introduce un comando, el intérprete de la línea de comandos analiza al comando de izquierda a derecha. Si el intérprete comprende el comando, la acción requerida se ejecuta y la CLI vuelve a la petición de entrada correspondiente. Sin embargo, si el intérprete no puede comprender el comando que se ingresa, mostrará un comentario que describe el error del comando.
+?
+Me ayuda a conocer los comandos en el CLI y son diferentes dependiendo donde esté en la CLI
+Comando en particular 
+Parte del comando, por ejemplo:
+Switch(config)#i?
+Me da los conjuntos parámetros posibles, esn este caso interface y ip
+Switch(config)#interface
+Ayuda a saber que otros parámetros o argumetnos pueden ir después
+Switch(config)#interface ?
+También ayuda a verificar el sintaxis de comando
+
+## Teclas de acceso rápido y métodos abreviados
+CLI proporciona
+  Teclas de acceso rápido
+  Accesos directos
+Facilitando la configuración, el monitoreo y la solución de prolemas
+Los comandos y las palabras clave pueden acortarse a la cantidad mínima de caracteres que identifica a una selección única
+Por ejemplo, configure---->conf
+Pulsación de teclas      Descripción
+Tab                      Completa una entrada de nombre de comando parcial
+Delete                   Borra el carácter a la izquierda del cursor
+Ctrl+D                   Borra el carácter donde está el cursor
+Ctrl+K                   Borra todos los caracteres desde el cursor hasta el final de la línea de comandos
+Esc D                    Borra todos los caraceres desde el cursor hasta el final de la palabra
+Ctrl+U o Ctrl+X          Borra todos los caracteres desde el cursor hasta el comienzo de la línea de comando
+Ctrl+W                   Borra la palabra a la izquierda del cursor
+Ctrl+A                   Desplaza el cursor hacia el principio de la línea
+Flecha Izq o Ctrl+B      Desplaza el cusor un carácter hacia la izquierda
+Esc B                    Desplaza el cursor una palabra hacia la izquieda
+Esc F                    Desplaza el cursor una palabra hacia la derecha
+Flecha Der o Ctrl+F      Desplaza el cursor un carácter hacia la derecha
+Ctrl+E                   Desplaza el cursor hasta el final de la línea de comandos
+Flecha up o Ctrl+P       Recupera los comandos en el búfer de historial, comenzando con la mayorpia de comandos recientes
+Ctrl+R o Ctrl+I o Ctrl+L Vuelve a mostrar el indicador del sitema y la línea de comando después de que se muestra un mensaje de consola                          recibido
+Nota: Aunque la Delete clave normalmente elimina el carácter a la derecha de la solicitud, la estructura del comando IOS no reconoce la tecla Eliminar
+Cuando una salida de comando produce más texto del que se puede mostrar en una ventana de terminal, el IOS mostrará una “--More--” solicitud. En la tabla siguiente se describen las pulsaciones de teclas que se pueden utilizar cuando se muestra esta solicitud
+Pulsación de teclas        Descripción
+Tecla Enter                Muestra la siguiente línea
+Barra espaciadora          Muestra la siguiente pantalla
+Cualquier otra tecla       Termina la cadena que se muestra y vuelve al modo EXEC con privilegios
+En esta tabla se enumeran los comandos utilizados para salir de una operación
+Pulsación de teclas        Descripción
+Ctrl-C                     Cuando está en cualquier modo de configuración, finaliza el modo de configuración y regresa al modo EXEC                                privilegiado. Cuando está en modo de configuración
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
