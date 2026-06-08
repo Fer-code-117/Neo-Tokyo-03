@@ -87,6 +87,22 @@ login
 end
 
 # Mensaje de aviso
+Para declarar que solo el personal autorizado debe intentar acceder al dispositivo
+Agregar un aviso a la salida del dispositivo
+Los avisos pueden ser una parte imprtante en los procesos legales en el caso de una demanda por el ingreso no autorizado a un dispositivo
+Para crear un mensaje de banner del día em un dispositivo de red, use el comando de configuración global banner motd # el mensaje del día #
+El símbolo "#" en la sintaxis del comando se denomina carácter delimitador. Se ingresa antes y después del mensaje. El carácter delimitador puede ser cualquier carácter siempre que no aparezca en el mensaje. Una vez se ha ejecutado el comando, aparecerá el aviso en todos los intentos posteriores de acceso al dispositivo hasta que el aviso se elimine
+Sw-Floor-1# configure terminal
+Sw-Floor-1(conf)# banner motd # Authorized Access Only #
+
+
+
+
+
+
+
+
+
 
 
 
