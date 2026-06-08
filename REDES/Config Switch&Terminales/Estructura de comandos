@@ -75,8 +75,9 @@ Barra espaciadora          Muestra la siguiente pantalla
 Cualquier otra tecla       Termina la cadena que se muestra y vuelve al modo EXEC con privilegios
 En esta tabla se enumeran los comandos utilizados para salir de una operación
 Pulsación de teclas        Descripción
-Ctrl-C                     Cuando está en cualquier modo de configuración, finaliza el modo de configuración y regresa al modo EXEC                                privilegiado. Cuando está en modo de configuración
-
+Ctrl-C                     Cuando está en cualquier modo de configuración, finaliza el modo de                            configuración y regresa al modo EXEC privilegiado. Cuando está en                              modo de configuración
+Ctrl-Z                     Cuando está en cualquier modo de configuración, finaliza el modo de                            configuración yy regresa al modo EXEC privilegiado
+Ctrl-Shift-6               Secuencia de interrupción múltipropósito utilizada para anular                                 búsquedas DNS, traceroutes, pings, etc
 
 
 
