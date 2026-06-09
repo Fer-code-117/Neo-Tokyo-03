@@ -1,0 +1,35 @@
+# Configuración manual de dirección IP para dispositivos finales
+Los end devices de tu red necesitan una dirección IP para que pueden comunicarse con otros dispositivos de tu red
+La información de la dirección IP se puede ingresar en los dispositivos finales de forma manual o automática mediante el Protocolo de configuración dinámica del host (DHCP)
+Para configurar manualmente una dirección IPv4 en un host de Windows, abra Control Panel > Network Sharing Center > Change adapter settings y elija el adaptador. A continuación, haga clic con el botón derecho y seleccione Properties para mostrar el Local Area Connection Properties
+Resalte Protocolo de Internet versión 4 (TCP/IPv4) y haga clic Properties para abrir la Internet Protocol Version 4 (TCP/IPv4) Properties ventana, que se muestra en la figura. Configure la información de la dirección IPv4 y la máscara de subred, y el gateway predeterminado.
+Nota: Las opciones de configuración y direccionamiento IPv6 son similares a IPv4
+
+# Configuración automática de direcciones IP para dispositivos finales
+Los dispositivos finales suelen usar DHCP de manera predeterminada para la configuración automática de la dirección IPv4. DHCP es una tecnología que se utiliza en casi todas las redes. Para comprender mejor por qué DHCP es tan popular, tenga en cuenta todo el trabajo adicional que habría que realizar sin este protocolo.
+En una red, DHCP habilita la configuración automática de direcciones IPv4 para cada dispositivo final habilitado para DHCP. Imagine la cantidad de tiempo que le llevaría si cada vez que se conectara a la red tuviera que introducir manualmente la dirección IPv4, la máscara de subred, el gateway predeterminado y el servidor DNS. Multiplique eso por cada usuario y cada uno de los dispositivos en una organización y se dará cuenta del problema. La configuración manual también aumenta las posibilidades de configuraciones incorrectas provocadas por la duplicación de la dirección IPv4 de otro dispositivo.
+para configurar DHCP en una PC con Windows, solo necesita seleccionar Obtain an IP address automatically y Obtain DNS server address automatically. Su PC buscará un servidor DHCP y se le asignarán los ajustes de dirección necesarios para comunicarse en la red.
+Nota: IPv6 utiliza DHCPv6 y SLAAC (configuración automática de direcciones sin estado) para la asignación dinámica de direcciones.
+
+# Configuración de interfaz virtual de Switch
+Para acceder al switch de manera remota, se deben configurar una dirección IP y una máscara de subred en la interfaz virtual del Switch (SVI)
+Para configurar una SVI en un switch, utilice el comando de interface vlan 1 configuración global. La Vlan 1 no es una interfaz física real, sino una virtual. A continuación, asigne una dirección IPv4 mediante el comando ip address ip-address subnet-mask de la configuración de interfaz. Finalmente, habilite la interfaz virtual utilizando el comando de no shutdown configuración de la interfaz.
+
+Una vez que se configuran estos comandos, el switch tiene todos los elementos IPv4 listos para la comunicación a través de la red
+Sw-Floor-1# conf t
+Sw-Floor-1(config)# interface vlan 1
+Sw-Floor-1(config)# ip address 192.168.1.20 255.255.255.0 p address ip-address subnet-mask
+Sw-Floor-1(config)# no shutdown
+Sw-Floor-1(config)# exit
+Sw-Floor-1(config)# ip default-gateway 192.168.1.1
+
+show ip interface brief 
+Este comando es útil para verificar la condición de las interfaces de switch.
+
+
+
+
+
+
+
+
