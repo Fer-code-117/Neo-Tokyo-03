@@ -1,0 +1,33 @@
+# Direcciones IP
+EL uso de direcciones IP es el principal medio para permitir que los dispositivos se ubiquen entres sí y para establecer la comunicación completa en Internet
+La estructura de una dirección IPv4 se denomina notación decimal punteada y se representa con cuatro números decimales entre 0 y 255. Las direcciones IPv4 son números asignados a los dispositivos individuales conectados a una red
+Con  una IPv4, también se necesita una máscara de subred.
+Una máscara de subred IPv4 es un valor de 32 bits que separa la porción de red de la dirección de la porción del host. Junto con la dirección IPv4, la máscara de subred determina a qué subred pertenece el dispositivo
+Ejemplo 
+Dirección Ipv4 (192.168.1.10)
+Máscara de subred (255.255.255.0)
+Gateway predeterminado (192.168.1.1)
+La dirección de gateway predeterminado es la dirección IP del router que el host utilizará para acceder a las redes remotas
+Las direcciones IPv6 tienen una longitud de 128 bits y se escriben como una cadena de valores hexadecimales. Cada cuatro bits está representado por un solo dígito hexadecimal; para un total de 32 valores hexadecimales
+Los grupos de cuartro digitos hexadecimales están separados por dos puntos (:). Las direcciones IPv6 no distinguen entre mayusculas u minusculas, y pueden escribirse en minusculas o mayúsculas
+
+# Interfaces y puertos
+Las comunicaciones de red dependen de las interfaces de los dispositivos para usuarios finales, las interfaces de los dispositivos de red y los cables que las conectan. Cada interfaz física tiene especificaciones o estándares que la definen. Los cables que se conectan a la interfaz deben estar diseñados para cumplir con los estándares físicos de la intertfaz. Los tipos de medios de red incluyen los cables de cobre de par trenzado, los cables de fibra óptica, los cables coaxiales o la tecnología inalámbrica
+Diferencias entre varios tipos de medios:
+  La distancia a través de la cual los medios pueden transportar una señal correctamente
+  El ambiente en el cual se instalará el medio
+  La cantidad de datos y la velocidad a la que se deben transmitir
+  El costo de los medios y la instalación
+Ethernet es la tecnología de red de área local (LAN)
+
+
+
+
+
+
+
+
+
+
+
+
