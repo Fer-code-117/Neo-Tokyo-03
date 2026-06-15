@@ -1,0 +1,62 @@
+# Descripción general del protocolo de red
+Los dispositivos finales pueden comunicarse a través de una red, cada dispositivo debe cumplir el mismo conjunto de reglas. Estas reglas se denominan protocolos y tienen muchas funciones en una red
+Los protocolos de red definen un formato y un conjunto de reglas comunes para intercambiar mensajes entre dispositivos.Los protocolos son implementados por dispositivos finales y dispositivos intermediarios en software, hardware o ambos. Cada protocolo de red tiene su propia función, formato y reglas para las comunicaciones
+
+## Protocolos de comunicaciones de red
+Los protocolos permiten que dos o más dispositivos se comuniquen a través de uno o más compatibles. La familia de tecnologpias Ethernet implica una variedad de protocolos como IP, Protocolo de transmición (TCP), Hypertext Protocolo de Transferencia (HTTP) y muchos más
+
+## Protocolos de seguridad de red
+Los protocolos protegen los datos para proporcionar autenticación, integridad de los datos y cifrado de los datos. Secure Shell (SSH),Secure Socket Layer (SSL) y Capa de Transporte Security (TLS)
+
+## Protocolos de routing
+Los protocolos permiten a los routers intercambiar información de ruta, comparar ruta, y a continuación, seleccionar la mejor ruta al destino e inalámbrica. Abrir Ruta más Corta Primero (OSPF) y Protocolo de Puerya de Enlace de Borde (BGP)
+
+## Protocolos de Detección de servicios
+Los protocolos se utilizan para la detección automática de dispositivos o servicios. Dynamic Host Protocolo de configuración (DHCP) que descubre servicios para la dirección IP y Sistema de nombre de Dominio (DNS) que se utiliza para realizar traducción de nombre a dirección IP
+
+# Funciones de protocolo de red
+Los protocolos de comunicación de red son responsables de una variedad de funciones necesarias para las comunicaciones de red entre dispositivos finales
+Los equipos y dispositivos de red utilizan protocolos acordados para comunicarse
+
+##Direccionamiento
+Esto identifica al remitente y al destinatario previsto del mensaje utilizando un esquema de direccionamiento definido. Ethernet, IPv4 e IPv6
+##Confiabilidad
+Esta funcióm proporciona mecanismos de entrega garantizados en caso de mensajes se pierden o se corrompen en tránsito. TCP proporciona entrega garantizada
+##Control de flujo
+Esta función asegura que los datos fluyan a una velocidad eficiente entre dos dispositivos de comunicación. TCP proporciona control de flujo
+##Secuenciación
+Esta función etiqueta de forma única cada segmento de datos transmitido. La utiliza la información de secuenciación para volver a ensamblar la información correctamente. Esto es útil si se pierden los segmentos de dato, retrasado o recibido fuera de pedido. TCP proporciona servicios de secuenciación 
+##Detección de errores
+Esta función se utiliza para determinar si los datos se dañaron durante la llamada. Varios protocolos que proporcionan detección de errores incluyen Ethernet, IPv4, IPv6 y TCP
+##Interfaz de aplicación
+Esta función contiene información utilizada para proceso a proceso comunicaciones entre aplicaciones de red. Al acceder a una págia web, los protocolos HTTP o HTTPS se utilizan para cominicarse entre el cliente y servidor web
+
+# Interacción de protocolos
+Un mensaje enviado a través de una red informática normalmente requiere el uso de varios protocolos, cada uno con sus propias funciones y formatos
+
+Pc----Mensaje----Interent--------Servidor
+         |
+        / \
+      /     \
+    /         \
+    |   HTTP   |
+    |   TCP    |
+    |    IP    |
+    | ETHERNET |
+    |----------|
+-HTTP: Este protocolo de aplicación rige la manera en que interactúa un servidor web y el cliente web. HTTP define el contenido y el formato de las solicitudes y respuestas intercambiadas entre el cliente y el servidor. Tanto el cliente como el software del servidor web implementan el HTTP como parte de la aplicación. HTTP se basa en otros protocolos para regular la forma en que se trnsaportan los mensajes entre el cliente y el servidor
+-Protocolo de control de transmición (TCP): Este protocolo administra las conversaciones individuales. TCP se encarga de garantizar la entrega fiable de la informacióm y de gestionar el control de flujo entre los dispositivos finales
+-Protocolo de Internet (IP): Este protocolo es responsable de entregar los mensajes del remitente al receptor. IP es utilizado por los enrutadores para reenviar los mensajes a través de varias redes
+-Ethernet: Este protocolo es responsable de la entregade mensajes de una NIC a otra NIC en la misma red de área locar (LAN) Ethernet
+
+
+
+
+
+
+
+
+
+
+
+
