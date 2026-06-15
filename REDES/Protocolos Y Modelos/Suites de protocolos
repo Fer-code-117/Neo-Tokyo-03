@@ -1,8 +1,45 @@
+# Conjuntos de protocolos de red
 Un grupo de protocolos interrelacionados que son necesarios para realizar una función de comunicación se denomina Suite de protocolos
 Los protocolos se muestran en capas, donde cada servicio de nivel superior depende de la funcionalidad definida por los protocolos que se muestran en los niveles inferiores. Las capas inferiores de la pila se encargan del movimiento de datos por la red y proporcionan servicios a las capas superiores, las cuales se enfocan en el contenido del mensaje que se va a enviar
 Los suites de protocolos son conjuntos de reglas que funcionan conjuntamente para ayudar a resolver un problema
 
 # Evolución de los conjuntos de protocolos
+Una suite de protocolos es un grupo de protocolos que trabajan en forma conjunta para proporcionar servicios integrales de comunicación de red. Desde la década de 1970 ha habido varios conjuntos de protocolos diferentes
+|---------------------------------------------------------|
+|Nombre    |   TCP   |   ISO   |   AppleTalk   |  Novell  |
+|de capa   |    IP   |         |               |  Netware |
+|---------------------------------------------------------|
+|          |  HTTP   | ACSE    |               |          |
+|          |  DNS    | ROSE    |      AFP      |  NDS     |
+|Aplicación|  DHCP   | TRSE    |               |          |
+|          |  FTP    | SESE    |               |          |
+|---------------------------------------------------------|
+|          |  TCP    | TP0 TP1 |    ATP AEP    |          |
+|Transporte|  UDP    |   TP2   |    NBP RTMP   |  SPX     |
+|          |         | TP3 TP4 |               |          |
+|---------------------------------------------------------|
+|          |IPv4 IPv6|CONP/CMNS|               |          |
+|Internet  | ICMPv4  |CLNP/CLNS|    AARP       |  IPX     |
+|          | ICMPv6  |         |               |          |
+|---------------------------------------------------------|
+|Acceso a  |                                              |
+| la red   |             Ethernet ARP WLAN                |
+|---------------------------------------------------------|
+-Internet Protocol Suite o TCP/IP
+  Este es el conjunto de protocolos más común y relevante que se utiliza hoy en día. El conjunto   de protocolos TCP/IP es un conjunto de protocolos estándar abierto mantenido por Internet        Engineering Task Force (IETF)
+-Protocolos de interconexión de sistemas abiertos (OSI) 
+  Esta es una familia de protocolos desarrollados conjuntamente en 1977 por la Organización        Internacional de Normalización (ISO) y la Unión Internacional de Telecomunicaciones (UIT). El    protocolo OSI categoriza las funciones de sus protocolos. Hoy OSI es conocido principalmente     por su modelo de capas. Los protocolos OSI han sido reemplazados en gran medida por TCP/IP
+-AppleTank
+  Un paquete de protocolos propietario de corta duración lanzado por Apple Inc. en 1985 para       dispositivos Apple. Apple adoptó TCP/IP para reemplazar AppleTank
+-Novell Netware
+  Un conjunto de protocolos propietariosde corta duración y sistema operativo de red desarrollado por Novell Inc en 1983 utilizando el protocolo de red IPX. En 1995, Novell adoptó TCP/IP para reemplazar a IPX
+
+# Ejemplo de protocolo TCP/IP
+Los protocolos TCP/IP son específicos de las capas de Aplicación, Transporte e Internet
+
+
+
+
 
 
 
