@@ -32,19 +32,35 @@ Una suite de protocolos es un grupo de protocolos que trabajan en forma conjunta
 -AppleTank
   Un paquete de protocolos propietario de corta duración lanzado por Apple Inc. en 1985 para       dispositivos Apple. Apple adoptó TCP/IP para reemplazar AppleTank
 -Novell Netware
-  Un conjunto de protocolos propietariosde corta duración y sistema operativo de red desarrollado por Novell Inc en 1983 utilizando el protocolo de red IPX. En 1995, Novell adoptó TCP/IP para reemplazar a IPX
+  Un conjunto de protocolos propietariosde corta duración y sistema operativo de red               desarrollado por Novell Inc en 1983 utilizando el protocolo de red IPX. En 1995, Novell adoptó   TCP/IP para reemplazar a IPX
 
 # Ejemplo de protocolo TCP/IP
-Los protocolos TCP/IP son específicos de las capas de Aplicación, Transporte e Internet
+Los protocolos TCP/IP son específicos de las capas de Aplicación, Transporte e Internet. No hay protocolos TCP/IP en la capa de acceso a la red. Los protocolos LAN de capa de acceso a la red más comunes son los protocolos Ethernet y WLAN (LAN inalámbrica). Los protocolos de la capa de acceso a la red son responsables de la entrega de los paquets IP en los medios físicos
 
+La figura muestra un ejemplo de los tres protocolos TCP/IP utilizados para enviar paquetes entre el navegador web de un host y el servidor web. HTTP, TCP e IP son los protocolos TCP/IP utilizados. En la capa de acceso a la red, Ethernet se utiliza en el ejemplo. Sin embargo, esto también podría ser un estándar inalámbrico como WLAN o servicio celular
 
+SERVIDOR
+  WEB
+   |           Nombre de la capa      Pila de protocolos
+   |
+   |      /     Aplicación              Protocolo de transferencia de hipertexto (HTTP)
 
+   |     /      Transporte              Protocolo de control de transmisión (TCP)
 
+MENSAJE-        Internet                Protocolo de Internet (IP)
 
+   |     \      Acceso a la red         Ethernet
 
+   |      \
+   |
+   |
+INTERNET
+   |
+   |
+   |
+   PC
 
-
-
+# Conjunto de TCP/IP
 
 
 
