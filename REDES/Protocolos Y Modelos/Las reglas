@@ -1,0 +1,103 @@
+# Fundamentos de la comunicación
+Para que se produzca la comunicación, los dispositivos deben saber "cómo" comunicarse
+Todos los métodos de comunicación tienen tres elementos en común:
+  -Los orígenes de los mensajes: Son las personas o los dispositivos electronicos      que deben enviar un mensaje a otras personas o dispositivos
+  -Destino del mensaje(recibidor): El destino recibe el mensaje y lo interpreta
+  -Canal: Está formado por los medios que proporcionan el camino por el que el         mensaje viaja desde el origen hasta el destino
+
+# Protocolos de comunicación
+El envío de mensaje, ya sea mediante comunicación cara a cara o a traés de una red, está regido por reglas llamadas "protocolos"
+
+# Establecimiento de reglas
+Antes de comunicarse entre sí, las personas deben utilizar reglas o acuerdos establecidos que rijan la conversación
+Los protocolos deben tener en cuenta los siguientes requisitos para entregar correctamente un mensaje que sea comprendido por el receptor
+  -Un emisor y un receptor identificados
+  -Idioma y gramática común
+  -Velocidad y momento de entrega
+  -Requisitos de confirmación o acuse de recibo
+
+# Requisitos de protocolo de red
+Los protocolos informáticos y de red definen los detalles sobre la forma en que los mensajes se transmiten a través de una red.Los protocolos informáticos comunes incluyen los siguientes requisitos:
+  -Codificación de los mensajes
+  -Formato y encapsulamiento del mensaje
+  -Tamaño del mensaje
+  -Sincronización del mensaje
+  -Opciones de entrega del mensaje
+
+# Codificación de los mensajes
+La codificación es el proceso mediante el cual la información se convierte en otra forma aceptable para la transmición. La decodificación revierte este proceso para intrepretar la idea
+Origen         Codificador     Transmisor    Medios de      Receptor   Destino 
+del mensaje ->            ->             ->  transmisión ->         -> del mensaje
+                                              "El canal"
+#Formato y encapsulamiento del mensaje
+Cuando se envía un mensaje desde el origen hacia el destino, se debe utilizar un formato o estructura específico. Los formatos de los mensajes dependen del tipo de mensaje y el canal que se utilice para entregar el mensaje
+Un mensaje que se envía a través de una red de computadoras sigue reglas de formato específicas para que pueda ser entregado y procesado
+## Protocolo de internet (IP)
+Ip es responsable de enviar un mensaje desde el origen del mensaje al destino a través de una o más redes
+|    Byte 1    |    Byte 2    |    Byte 3    |    Byte 4    |
+<-------------> <------------> <------------> <------------->
+|Versión|Clase de     |       Etiqueta de flujo             | ^
+|       | tráfico     |                                     | |
+|---------------------------------------------------------- | |
+|Longitud de carga útil       |Encabezado    |Límite de     | |
+|                             |siguiente     |saltos        | |  40 bytes
+|-----------------------------------------------------------| |
+|                      Dirección IP de origen               | |
+|                                                           | |
+|-----------------------------------------------------------| |
+|                      Dirección IP de destino              | |
+|                                                           | v
+---------------------------------------------------------------
+
+# Tamaño del mensaje
+Cuando se envía un mensaje largo de un host a otro a través de una red, es necesario separarlo en partes más pequeña. Las reglas que controlan el tamaño de las partes, o tramas que se comunican a través de la red, son muy estrictas. También pueden ser diferente, de acuerdo con el canal utilizado. Las tramas que son demasiado largas o cortas no se entregan
+Las restricciones de tamaño de las tramas requieren que el host de origen divida un mensaje largo en fragmentos individuales que cumplan los requisitos de tamaño mínimo y máximo. El mensaje largo se envirará en tramas independientes, cada trama contrendrá una parte del mensaje original. Cada trama también tendrá su propia información de direccionamiento. En el host receptor,las partes del mensaje se vuelven a unir para reconstruir el mensaje original
+
+# Sincronización del mensaje
+El tiempo de los mensajes también es muy importante en las comunicaciones de red. El tiempo de los mensajes incluye:
+  -Control de flujo: Este es el proceso de gestióm de la velocidad de transmición de datos. La sincronización también afecta la cantidad de información que se puede enviar y la velocidad con la que puede entregarse. En la comunicación de red, existen protocolos de red utilizados por los dispositivos de origen y destino para negociar y admnistrar el flujo de información
+  -Tiempo de espera de respuesta (Response Timeout):Los host de las redes tienen reglas que especifican cuánto tiempó deben esperar una respuesta y qué deben hacer si se agota el tiempo de espera para la respuesta
+  -El método de acceso: Determina en qué momento alguien puede enviar un mensaje. Cuando un dispositivo desea transmitir en una LAN inalámbrica, es necesario que la tarjeta de interfaz de red (NIC) WLAN determine si el medio inalámbrico está disponible
+
+# Opciones de entrega del mensaje
+Las comunicaciones de red tienen 3 tipos de comuniación de datos:
+-Unicast: La información se transmite a un único dispositivo final
+-Multicast: La información se transmite a uno o varios dispositivos finales
+-Transmición: La información se transmite a todos los dispositivos finales
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
