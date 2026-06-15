@@ -1,1 +1,36 @@
+Un grupo de protocolos interrelacionados que son necesarios para realizar una función de comunicación se denomina Suite de protocolos
+Los protocolos se muestran en capas, donde cada servicio de nivel superior depende de la funcionalidad definida por los protocolos que se muestran en los niveles inferiores. Las capas inferiores de la pila se encargan del movimiento de datos por la red y proporcionan servicios a las capas superiores, las cuales se enfocan en el contenido del mensaje que se va a enviar
+Los suites de protocolos son conjuntos de reglas que funcionan conjuntamente para ayudar a resolver un problema
+
+# Evolución de los conjuntos de protocolos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
