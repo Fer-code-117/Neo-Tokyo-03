@@ -71,7 +71,7 @@ Hoy en día, el conjunto de protocolos TCP/IP incluyen muchos protocolos y conti
 |   Capa de     |  nombre       | de host       | electrónico | de archivos  |   y web     |
 |  aplicación   | ------------  |---------------|-------------|--------------|-------------|
 |               |               |    DHCPv4     |    SMTP     |     FTP      |    HTTP     |
-|               |Envenenamiento |    DHCPv6     |    POP3     |     SFTP     |    HTTPS    |
+|               |      DNS      |    DHCPv6     |    POP3     |     SFTP     |    HTTPS    |
 |               |               |    SLAAC      |    IMAP     |     TFTP     |    REST     |  
 |------------------------------------------------------------------------------------------|
 |               |        Orientado a la conexión       |           Sin conexión            |
@@ -89,6 +89,48 @@ Hoy en día, el conjunto de protocolos TCP/IP incluyen muchos protocolos y conti
 | acceso de red |--------------------------------------|-----------------------------------|
 |               |                 ARP                  |   Ethernet              WLAN      |
 |------------------------------------------------------------------------------------------|
+
+## Capa de aplicación
+  Sistema de nombres
+    -DNS (Domain Name System): Traduce los nombres de dominio tales como CISCO.com a direcciones IP
+  Configuracióm de host
+    -DHCPv4: Protocolo de configuración dinámica de host para IPv4. Un servidor DHCPv4 asigna dinámicamente          información de direccionamiento IPv4 a cliente DHCPv4 al inicio y permite que las direcciones se                reutilicen cuando ya no sean necesarias
+    -DHCPv6: Protocolo de configuración dinámica de host para IPv6.  DHCPv6 es similar a la DHCPv4. Un servidor      DHCPv6 asigna dinámicamente información de direccionamiento IPv6 a clientes DHCPv6 al inicio
+    -SLAAC: Autoconfiguración sin estado. Método que permite a un dispositivo obtener su información de              direccionamiento IPv6 sin utilizar un servidor DHCPv6
+  Correo electrónico
+    -SMTP: Protocolo para transferencia simple de correo. Les permite a los clientes enviar correo electrónico       a un servidor de correo y les permite a los servidores enviar correo electrónico a otros servidores
+    -POP3: Protocolo de Oficina de correo version 3. Permite a los clientes recuperarcorreo electrónico de un        servidor de correo y descargarlo en la aplicación de correo local del cliente
+    -IMAP: Protocolo de acceso a mensajes de internet. Permirte que los clientes accedan a correos electrónicos      almacenados en un servidor de correo
+Tranferencia de archivos
+    -FTP: Protocolo de transferencia de archivos. Establece las reglas que permiten a un usuario en un host          acceder y transferir archivos hacia y desde otro host de una red. FTP es un protocolo confiable de entrega      de  archivos, orientafo a la conexión y con acuse de recibo
+    -SFTP: SSH Protocolo de transferencia de archivos como una extensión al protocolo Secure Shell (SSH), el         SFTP se puede utilizar para estableceruna sesión segura de transferencia de archivos, en el que el archivo      transferido está cifrado. SSH es un método para el inicio de sesión remoto seguro que se utiliza                principalmente para acceder a la línea de comandos de un dispositivo
+    -TFTP: Protocolo de transferencia de archivos tribial. Un protocolo de transferencia de archivos simple y        sin conexión con la entrega de archivos sin reconocimiento y el mejor esfuerzo posible. Utiliza menos           sobrecarga que FTP
+Web y Servicio Web
+    -HTTP: Hypertext Tranfer Protocol. Un conjunto de reglas para intercambiar texto, imágenes gráficas,             sonido, video y otros archivos multimedia en la World Wide Web
+    -HTPPS: HTTP seguro. Una forma sefura que HTTP que cifra los
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
