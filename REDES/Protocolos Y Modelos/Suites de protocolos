@@ -102,12 +102,60 @@ Hoy en día, el conjunto de protocolos TCP/IP incluyen muchos protocolos y conti
     -POP3: Protocolo de Oficina de correo version 3. Permite a los clientes recuperarcorreo electrónico de un        servidor de correo y descargarlo en la aplicación de correo local del cliente
     -IMAP: Protocolo de acceso a mensajes de internet. Permirte que los clientes accedan a correos electrónicos      almacenados en un servidor de correo
 Tranferencia de archivos
-    -FTP: Protocolo de transferencia de archivos. Establece las reglas que permiten a un usuario en un host          acceder y transferir archivos hacia y desde otro host de una red. FTP es un protocolo confiable de entrega      de  archivos, orientafo a la conexión y con acuse de recibo
-    -SFTP: SSH Protocolo de transferencia de archivos como una extensión al protocolo Secure Shell (SSH), el         SFTP se puede utilizar para estableceruna sesión segura de transferencia de archivos, en el que el archivo      transferido está cifrado. SSH es un método para el inicio de sesión remoto seguro que se utiliza                principalmente para acceder a la línea de comandos de un dispositivo
-    -TFTP: Protocolo de transferencia de archivos tribial. Un protocolo de transferencia de archivos simple y        sin conexión con la entrega de archivos sin reconocimiento y el mejor esfuerzo posible. Utiliza menos           sobrecarga que FTP
-Web y Servicio Web
-    -HTTP: Hypertext Tranfer Protocol. Un conjunto de reglas para intercambiar texto, imágenes gráficas,             sonido, video y otros archivos multimedia en la World Wide Web
-    -HTPPS: HTTP seguro. Una forma sefura que HTTP que cifra los
+    -FTP: Protocolo de transferencia de archivos. Establece las reglas que permiten a un usuario en un host acceder y transferir archivos hacia y desde otro host de una red. FTP es un protocolo confiable de entrega de archivos, orientafo a la conexión y con acuse de recibo
+    -SFTP: SSH Protocolo de transferencia de archivos como una extensión al protocolo Secure Shell (SSH), el  SFTP se puede utilizar para estableceruna sesión segura de transferencia de archivos, en el que el archivo  transferido está cifrado. SSH es un método para el inicio de sesión remoto seguro que se utiliza principalmente para acceder a la línea de comandos de un dispositivo
+    -TFTP: Protocolo de transferencia de archivos tribial. Un protocolo de transferencia de archivos simple y sin conexión con la entrega de archivos sin reconocimiento y el mejor esfuerzo posible. Utiliza menos sobrecarga que FTP Web y Servicio Web
+    -HTTP: Hypertext Tranfer Protocol. Un conjunto de reglas para intercambiar texto, imágenes gráficas, sonido, video y otros archivos multimedia en la World Wide Web
+    -HTPPS: HTTP seguro. Una forma sefura que HTTP que cifra los datos que intercambian a través de la world wide web
+    -REST: Transferencia de estado representacional. Servicio web que se utiliza interfaces de programación de aplicaciones (API) y solicitudes HTTP para crear aplicaciones web
+## Capa de transporte
+Orientado a la conexión
+-TCP: Protocolo de control de transmición. Permite la comunicación confiable entre procesos que se ejecutan en hosts independoentes y tiene transmisiones fiables y con acuse de recibo que confirman la entrega exitosa
+-UPD: Protocolo de datagramas de usuario. Habilita un proceso que se ejecuta en un host para enviar paquetes a un proceso que se ejecuta en otro host.Sin embargo, no confirma la transmición correcta de datagramas
+## Capa de internet
+Protocolo de internet
+-IPv4: Protocolo de Internet versión 4. Recibe segmentos de mensajes de la capa de transporte, empaqueta mensajes en paquetes y dirige paquetes para entrega end-to-end a través de una red. IPv4 utiliza una dirección de 32 bits
+-IPv6: IP versión 6. Similar al IPv4 pero usa una dirección de 128 bits
+-NAT: Traducción de direcciones de red. Traduce las direcciones IPv4 de una red privada en direcciones IPv4 públicas globalmente únicas
+Mensajería
+-ICMPv4: Protocolo de control de mensajes de internet. Proporciona comentarios desde un host de destino a un host de origen con respecto a los errores en la entrega de paquetes
+-ICMPv6: ICMP para IPv6. Funcionalidad similar a ICMPv4 pero se utiliza para paquetes IPv6
+-ICMPv6 ND: Protocolo de descubrimiento de vecinos versión 6. Incluye cuatro mensajes de protocolo que se utilizan para la resolución de direcciones y la detección de direcciones duplicadas
+Protocolos de routing
+-OSPF: Abrir el camino más corto primero. Protocolo de enrutamiento de estado de vínculo que utiliza un diseño jerárquico basado en áreas. OSPF es un protocolo de routing de estándar abierto
+-EIGRP: Protocolo de enrutamiento de puerta de enlace interior mejorado. Es un protocolo de routing abierto desarrollado por CISCO, utiliza una métrica compuesta en función del ancho de banda, la demora, la carga y la confiabilidad
+-BGP: Protocolo de puerta de enlace de frontera. Un protocolo de enrutamiento de puerta de enlace exterior estándar abierto utilizando entre proovedores de servicios de internet (ISP). BGP tambipen se utiliza entre los ISP y sus clientes privados más grandes para intercambiar información de enrutamiento
+Capa de acceso de red
+Resolución de dirección
+-ARP: Protocolo de resolucipon de direcciones. Proporciona la asignación de direcciones dinámicas entre una dirección IP y una dirección de Hardware
+Protocolos de enlace de datos
+-Ethernet: Define las reglas para conectar y señalizar estándares de la capa de acceso a la red
+-WLAN: Wireless Local Area Network. Define las reglas para la señalización inalámbrica a travpes de las freciencias de radio de 2.4 GHz y 5 GHz
+
+#Proceso de comunicación TCP/IP
+
+Servidor----------Mensaje----------Cliente
+
+  |---------------------------------------|
+  |  Ethernet  |  IP  |  TCP  |  Datos |  |
+  |---------------------------------------|
+  ^            ^      ^       ^        ^  ^
+  |            |      |       | Datos  |  |
+  |            |      |       |usuario |  |
+  |            |      |       |--------|  |
+  |            |      |  Segmento TCP  |  |
+  |            |      |----------------|  |
+  |            |     Paquete IP        |  |
+  |            |-----------------------|  |
+  |             Trama de Ethernet         |
+  |---------------------------------------|
+
+
+
+
+
+
+
 
 
 
