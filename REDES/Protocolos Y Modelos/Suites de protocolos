@@ -61,16 +61,34 @@ INTERNET
    PC
 
 # Conjunto de TCP/IP
+Hoy en día, el conjunto de protocolos TCP/IP incluyen muchos protocolos y continúa evolucionando para admitir nuevos servicios. Algunos de los más populares se muestran en la figura.
 
-
-
-
-
-
-
-
-
-
+|------------------------------------------------------------------------------------------|
+|     Capa      |                                                                          |
+|    TCP/IP     |                                                                          |
+|------------------------------------------------------------------------------------------|
+|               | Sistemas de   |Configuración  |   Correo    |Transferencia |Servicios web|
+|   Capa de     |  nombre       | de host       | electrónico | de archivos  |   y web     |
+|  aplicación   | ------------  |---------------|-------------|--------------|-------------|
+|               |               |    DHCPv4     |    SMTP     |     FTP      |    HTTP     |
+|               |Envenenamiento |    DHCPv6     |    POP3     |     SFTP     |    HTTPS    |
+|               |               |    SLAAC      |    IMAP     |     TFTP     |    REST     |  
+|------------------------------------------------------------------------------------------|
+|               |        Orientado a la conexión       |           Sin conexión            |
+| Capa de       |--------------------------------------|-----------------------------------|
+| transporte    |                  TCP                 |                UDP                |
+|               |                                      |                                   |
+|------------------------------------------------------------------------------------------|
+|               |   Protocolo de Internet    |   Mensajería     |  Protocolos de routing   |    
+|  Capa de      |----------------------------|------------------|--------------------------|
+|   internet    |    IPv4                    |     ICMPv4       |    OSPF                  |
+|               |                 NAT        |        T         |                 BGP      |
+|               |    IPv6                    |     ICMPv6 ND    |    EIGRP                 |
+|------------------------------------------------------------------------------------------|
+| Capa de       |       Resolución de dirección        |   Protocolos de enlace de datos   |
+| acceso de red |--------------------------------------|-----------------------------------|
+|               |                 ARP                  |   Ethernet              WLAN      |
+|------------------------------------------------------------------------------------------|
 
 
 
