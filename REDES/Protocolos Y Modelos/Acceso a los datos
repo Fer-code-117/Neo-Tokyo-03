@@ -1,0 +1,160 @@
+# Direcciones
+La capa de red y la capa de enlace de datos son responsables de enviar los datos desde el dispositivo de origen i emisor hasta el dispositivo de destino receptor. 
+Los protocolos de las dos capas contienen las direcciones de origen y de destino, pero sus direcciones tienen objetivos distintos
+-Direcciones de origen y de destino de red
+Son responsables de enviar el paquete IP desde el dispositivo de origen hasta el dispositivo final, ya sea en la misma red o a una red remota
+-Direcciones de origen y de destino de la capa de enlace de datos
+Son responsables de enviar la trama de enlace de datos desde una tarjeta de interfaz de red (NIC) a otra en la misma red
+Física->Bits de temporización y sincronización
+Enlace de datos-> Direcciones físicas de destino y origen
+Red-> Direcciones de red lógica de destino y origen
+Transporte-> Número de proceso de destino y de origen (puertos)
+Capas superiores-> Datos codificados de aplicación
+
+# Dirección lógica de capa 3
+Una lógica de la capa de red, o capa 3, se utiliza para enviar el paquete IP desde el dispositivo de origen hasta el dispositivo de destino, como se muestra en la fig
+
+Codigo original                                                               Servidor 
+      PC1     -----Paquete IP----Router1---Paquete IP-->Router2--Paquete IP-->  web
+192.168.1.110                                                               172.16.1.99
+         \                                                              /
+          \                                                            /
+           \                      Paquete IP de la capa 3             /
+                    | IP de origen   | Dirección IP de destino |    |
+                    | 192.168.1.110  |172.16.1.99              |    |
+            
+Los paqutes IP contienen dos direcciones IP:
+-Dirección IP de origen
+La dirección IP del dispositivo emisor, la fuente de origen del paquete
+-Dirección IP del destino 
+La dirección IP del dispositivo receptor, es decir, el destino final del paquete
+Las direcciones de la capa de red, o direcciones IP indican el origen y el destino final. Esto es cierto si el origen y el destino están en la misma red IP o redes IP diferentes
+Un paquete IP contiene dos partes:
+-Porción de red (IPv4) o Prefijo (IPv6)
+La sección más a la izquierda de la dirección que indica la red de la que es miembro la dirección IP. Todos los dispositivos de la misma red tienen la misma porción de red de la dirección
+-Porción de host (IPv4) o ID de interfaz (IPv6) 
+La parte restante de la dirección que identifica un dipositivo específico de la red. La sección de host es única para cada dispositivo o interfaz en la red
+*Nota: La máscara de subred (IPv4) o la longitud del prefijo (IPv6) se utiliza para identificar la porción de red de una dirección IP de la porción del host
+
+#Dispositivos en la misma red
+EJEMPLO:
+Tenemos un equipo cliente, PC1, que se comunica con un servidor FTP, en la misma red IP+
+-Dirección IPv4 de origen: La dirección IPv4 del dispositivo emisor, es decir, el equipo cliente PC!: 192.168.1.110
+-Dirección IPv4 de destino: La dirección del dispositivo receptor, el servidor FTP: 192.168.1.9
+En la figura, observamos que la porción de red de las direcciones IP de origen y de destino se encuentran en la misma red. Observamos en la figura que la parte de la dirección IPv4 de origen y la parte de la dirección IPv4 de destino son iguales y, por lo tanto, el origen y el destino están en la misma red
+
+|------Encabezado de la trama de --|-----Encabezado de paquete IP----|
+|          Ethernet de             |          de la capa de red      |
+|      enlace de datos             |                                 |
+|------------------|--------------------|----------------------|--------------------|----------|
+|      Destino     |      Origen        |      Origen          |    Destino         |          |  
+|------------------|--------------------|-----------|----------|--------------------|  Datos   |
+|CC-CC-CC-CC-CC-CC | AA-AA-AA-AA-AA-AA  |   Red     |  Host    |  Red      | Host   |          |
+|                  |                    | 192.168.1 |  110     | 192.168.1 |  9     |          |
+|-----------------------------------------------------------------------------------|----------|
+
+# Función de las direcciones de la capa de enlace de datos- La misma red IP
+Cuando el emisor y el receptor del paquete IP están en la misma red, la trama de enlace de datos se envía directamente al dispositivo receptor. En una red Ethernet, las direcciones de enlace de datos se conocen como direcciones de control de acceso a medios de Ethernet (MAC)
+
+|------Encabezado de la trama de --|-----Encabezado de paquete IP----|
+|          Ethernet de             |          de la capa de red      |
+|      enlace de datos             |                                 |
+|------------------|--------------------|----------------------|--------------------|----------|
+|      Destino     |      Origen        |      Origen          |    Destino         |          |
+|------------------|--------------------|-----------|----------|--------------------|  Datos   |
+|CC-CC-CC-CC-CC-CC | AA-AA-AA-AA-AA-AA  |   Red     |  Host    |  Red      | Host   |          |
+|                  |                    | 192.168.1 |  110     | 192.168.1 |  9     |          |
+|-----------------------------------------------------------------------------------|----------|
+ ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Estas son las direcciones MAC
+Las direcciones MAC están integradas físicamente a la NIC Ethernet
+-Dirección MAC de origen
+La dirección de enlace de datos, o la direccion MAC Ethernet, del dispositivo que envía la trama de enlace de datos con el paqute IP encapsulado. La dirección Mac de la NIC Ethernet de PC1 es AA-AA-AA-AA-AA-AA, redactada en notación hexadecimal
+-Dirección MAC de destino
+Cuando el dispositivo receptor está en la misma red que el mismo emisor, la dirección MAC de destino es la dirección de enlace de datos del dispositivo receptor.La dirección MAC de destino es la dirección MAC del servdor FTP: cc-cc-cc-cc-cc-cc-, escrito en notacón hexadecimal
+
+# Dispositivos en una red remota
+# Función de las direcciones de la capa de red
+Cuando el emisor del paquete se encuentra en una red distinta de la del receptor, las direcciones IP de origen y de destino representan los hosts en redes diferentes. Esto indica la porción de red de la direcicón IP del host destino
+-Dirección IPv4 de origen: La dirección IPv4 del dispositivo emisor, es decir, el equipo cliente PC1: 192.168.1.110
+-Dirección IPv4 de destino: La dirección del dispositivo receptor, el servidor web: 172.16.1.99
+|------Encabezado de la trama de --|-----Encabezado de paquete IP----|
+|          Ethernet de             |          de la capa de red      |
+|      enlace de datos             |                                 |
+|------------------|--------------------|-----------------------|-----------------------|----------|
+|      Destino     |      Origen        |      Origen           |    Destino            |          |
+|------------------|--------------------|-----------------------|-----------------------| Datos    |
+|11-11-11-11-11-11 | AA-AA-AA-AA-AA-AA  |   Red     |Dispositivo|  Red      |Dispositivo|          |
+|                  |                    | 192.168.1 |  110      | 172.16.1  |  99       |          |
+|---------------------------------------------------------------------------------------|----------|
+
+# Rol de acceso a datos de las direcciones de capa de vínvulo de datos-Diferentes IP
+Cuando el emisor y el receptor del paquete IP se encuentran en redes diferentes, la trama de enlace de datos Ethernet no se puede enviar directamente al host de destino, debido a que en la red del emisor no se puede tener acceso directamente al host. La trama de Ethernet se debe enviar a otro dispositivo conocido como router o gateway predeterminado. 
+En nuestro ejemplo, gateway predeterminado es r1. r1 tiene una direcicón de enlace de datod Ethernet que se encuentra en lamisma red que PC1. Esto permite que PC1 alcance el router directamente
+-Dirección MAC de origen
+La dirección Mac de Ethernet del dispositivo emisor, PC1. LA la dirección MAC de la interfaz Ethernet de PC1 es AA-AA-AA-AA-AA-AA
+-Dirección MAC de destino
+Cuando el receptor, la dirección IP de destino, está en una red distinta de la del dispositivo emisor, este utiliza la dirección MAC Ethernet del gateway predetermiando o el router. En  este ejemplo, la dirección MAC de destino es la dirección MAC de la interfaz de Ethernet de r1, 11-11-11-11-11-11. Esta es la interfaz que se está conectando a la misma red que PC1. como se muestra en la figura
+
+|------Encabezado de la trama de --|-----Encabezado de paquete IP----|
+|          Ethernet de             |          de la capa de red      |
+|      enlace de datos             |                                 |
+|------------------|--------------------|-----------------------|-----------------------|----------|
+|      Destino     |      Origen        |      Origen           |    Destino            |          |
+|------------------|--------------------|-----------------------|-----------------------| Datos    |
+|11-11-11-11-11-11 | AA-AA-AA-AA-AA-AA  |   Red     |Dispositivo|  Red      |Dispositivo|          |
+|                  |                    | 192.168.1 |  110      | 172.16.1  |  99       |          |
+|---------------------------------------------------------------------------------------|----------|
+
+
+                                      192.168.1.1            172.16.1.1                                      172.16.1.99
+      PC1                            11-11-11-11-11-11       22-22-22-22-22-22                              AB-CD-EF-12-34-56
+  192.168.1.110   ----------SWTCH---------ROUTER 1      ROUTER 2------------------------SWTCH------------SERVIDOR 
+AA-AA-AA-AA-AA-AA                               \       /                                                    WEB
+                                                  ROUTER
+
+
+La trama de Ethernet con el paqute IP encapsulado ahora se puede transmitir a R1. R1 reenvía el paquete al destino, el servidor web. Esto puede significar que R1 reenvía el paquete a otro router o directamente al servidor web si el destino se encuentra en una red conectada a R1
+Es importante que la dirección IP del gateway predeterminado esté configurada en cada host de la red local. Todos los paquetes que tienen como destino redes remotas se envían al gateway predeterminado.  
+
+#Direcciones de enlace de datos
+La dirección física de la capa de enlace de datos, o capa 2, tiene una función distinta. Su propósito es enviar la trama de enlace de datos desde una interfaz de red hasta otra interfaz de red en la misma red
+Antes de que un paquete IP pueda enviars
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
