@@ -119,9 +119,65 @@ Es importante que la dirección IP del gateway predeterminado esté configurada 
 
 #Direcciones de enlace de datos
 La dirección física de la capa de enlace de datos, o capa 2, tiene una función distinta. Su propósito es enviar la trama de enlace de datos desde una interfaz de red hasta otra interfaz de red en la misma red
-Antes de que un paquete IP pueda enviars
+Antes de que un paquete IP pueda enviarse a través de una red conectada por cable o inalámbrica, se debe encapsular en una trama de enlace de datos de modo que pueda transmitir a travpes del medio físico
 
+HOST A ROUTER
 
+Código original                                                                      Destino final
+   PC1                         /  Router \                / Router \                 Servidor web
+192.168.1.110  | NIC |--| NIC | ->      <-| NIC |--| NIC |->      <-| NIC |--| NIC | 172.16.1.99  
+            ------------------>\         / -------------->\        /-------------->
+                  | L2 | L3 |                | L2 | L3 |               | L2 | L3 |
+                      /
+                     /
+                    /
+    |''''''''''''''''''''''''''''''''|  
+    |----------------|---------------|---------------|---------------|
+    | NIC de destino | NIC de origen | IP de origen  | IP de destino | 
+    |                |               | 192.168.1.110 | 172.16.1.99   |
+    |----------------|---------------|---------------|---------------|
+            Encabezado de L2                 Encabezado de L3
+
+Router a Router
+
+Código original                                                                      Destino final
+   PC1                         /  Router \                / Router \                 Servidor web
+192.168.1.110  | NIC |--| NIC | ->      <-| NIC |--| NIC |->      <-| NIC |--| NIC | 172.16.1.99  
+            ------------------>\         / -------------->\        /-------------->
+                  | L2 | L3 |                | L2 | L3 |               | L2 | L3 |
+                                                 /
+                                                /
+    |''''''''''''''''''''''''''''''''|<--------/
+    |----------------|---------------|---------------|---------------|
+    | NIC de destino | NIC de origen | IP de origen  | IP de destino | 
+    |                |               | 192.168.1.110 | 172.16.1.99   |
+    |----------------|---------------|---------------|---------------|
+            Encabezado de L2                 Encabezado de L3
+
+Enrutador a servidor
+
+Código original                                                                      Destino final
+   PC1                         /  Router \                / Router \                 Servidor web
+192.168.1.110  | NIC |--| NIC | ->      <-| NIC |--| NIC |->      <-| NIC |--| NIC | 172.16.1.99  
+            ------------------>\         / -------------->\        /-------------->
+                  | L2 | L3 |                | L2 | L3 |               | L2 | L3 |
+                                                                          /
+                                                                        /
+    |''''''''''''''''''''''''''''''''|<-------------------------------/
+    |                                |
+    |----------------|---------------|---------------|---------------|
+    | NIC de destino | NIC de origen | IP de origen  | IP de destino | 
+    |                |               | 192.168.1.110 | 172.16.1.99   |
+    |----------------|---------------|---------------|---------------|
+            Encabezado de L2                 Encabezado de L3
+
+A medida que el paquete se mueve de host a router, de router a router y,finalmente, de router a host es encapsulado en una nueva trama de enlace de datos, en cada punto del recorrido. Cada trama de enlace de datos contienen la dirección de Origen de enlace de datos de la terjeta NIC que envía la trama y la dirección de destino de enlace de datos de la tarjeta NIC que recibe la trama
+El protocolo de enlace de datos de capa 2 solo se utiliza para enviar el paquete de NIC a NIC en la misma red. EL router elimina la información de la capa 2 a medida que una NIC la recibe y agrega nueva infomación de enlace de datos antes de reenviarla a la NIC de salida en su recorrido hacia el dispositivo final
+EL paquete IP se encapsula en una trama de enlace de datos que contiene información de enlace de datos, como la siguiente
+-Dirección de enlace de datos de origen
+La dirección física de la NIC del dispositivo que envía la trama de enlace de datos
+-Dirección de enlace de datos de destino
+La dirección física de la NIC que recibe la trama de enlace de datos. Esta direccióm es el router del salto siguiente o el dispositivo de destino final
 
 
 
