@@ -16,7 +16,44 @@ Se trata de una perturbacón causada por los campos eléctricos o magnéticos de
 4.El equipo receptor lee una señal cambiada
 Para contrarrestar los efectos negativos de la EMI y RFI, algunos cables de cobre se empaquetan con un blindaje metálico y requiere una conexión a la tierra adecuada
 Para contrarrestar los efectos negativos del crosstalk, alguno dtipos de cables de cobre tienen pares de hilos de circuitos opuestos trenzados que cancelan dicho tipo de interferencia en forma efizaz
-La susceptibilidad de los cables de cobre al ruido electrónico se puede limitar utilizando estas recomendaciones
+La susceptibilidad de los cables de cobre al ruido electrónico se puede limitar utilizando estas recomendaciones:
+-La elección del tipo o la categoria de cable más adecuados a un entorno de red determinado
+-El diseño de una infraestructura de cables para evitar las fuentes de interferecia posibles y conocidas en la estructura del edificio
+-El uso de técnicas de cableado que incluyen el manejo y la terminación apropiados de cables
+
+#Tipos de cableado de cobre
+Cable de par trenzado no blindado (UTP)
+Cable de par trenzado blindado (STP)
+Cable coaxial
+
+#Par trenzado no blindado (UTP)
+Medio de red más común. El cableado UTP, quese termina con conectores RJ-45, se utiliza para interconectar host de red con dispositivos intermediarios de red, como switches y routers
+EN LAN, el cable UTP consta de cuatro pared de hilos codificados por colores que están trenzados entre sí y recubiertos conun revestimiento de plástico flexible que los oritege contra daños físicos menores. EL trenzado de los hilos ayuda a proteger contrra las interferencias de señales de otros hilos
+
+# Par trenzado blindado (STP)
+Proporciona una mejor protección contra ruido que el cableado UP. Sin embargo, en comparación con el cable UTP, el cable STP es mucho más costo y dificil de intalar- Utiliza RJ-45
+Es cable STP combina las técnicas de blindaje para contrarrestar la EMI y la RFI, y el trenzado de hilos para contrarrestar el crosstalk.
+El cable STP utiliza cuatro pares de hilos. Cada uno de estos pares está empaquetado primero con un blindaje de hoja metálica y, luego, el conjunto se empaqueta con una malla tejida o una hoja metálica
+
+# Cable coaxial
+El cable coaxial obtiene su nombre del hecho que hay dos conductores que comparten el mismo eje. Cable coaxial consts de lo siguiente:
+-Se utiliza un conductor de cobre para transmitir las señales electrónicas
+-Una capa de aislamiento plástico flexible que rodea al conductor de cobre
+-Sobre ese material aislante, hay una malla de cobre tejida o una hoja metalida que actúa como un segundo hilo en el circuito y como blindaje para el conductor interno. La segunda capa de blindaje reduce la cantidad de interferencia elecromagnética externa
+-La totalidad del cable está cubierta por un revestimiento para evitar daños físicos menores.
+El diseño del cable coaxial se usa en las siguientes situaciones:
+-Instalaciones inalámbricas
+Los cables coaxiales conectan antenas a los dispositivos inalámbricos. También transportan energía de radiofrecuecnia (RF) entre las antenas y el equipo de radio
+-Instalaciones de internet por cable
+Los proveedores de servicio de cable proporcionan conecticidad a Internet a sus clientes mediante el reemplazo de porciones de cable coaxial y la administración de elementos de amplificación con cables de fibra óptica
+
+
+
+
+
+
+
+
 
 
 
