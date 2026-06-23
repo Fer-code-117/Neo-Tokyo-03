@@ -1,0 +1,41 @@
+# La conexión física
+Una conexión física puede ser una conexión por cable o una conexión inalámbrica mediante ondas de radio
+El tipo de conexión física depende de la configuración de la red.Dispositivos que se conectan físicamente, mediante cables, a un siwtch compartido se denominda red cableada. Los datos se transmiten a través de un cable físico
+En dispositivos inalámbricos, los datos se transmiten mediante ondas de radio. Los dispositivos en una red inalámbrica deben estar conectados a un punto de acceso inalámbrico (AP o router inalámbrico)
+Router inalámbrico
+Componentes:
+-Las antenas inalámbricas
+-Varios puertos de Switch ethernet
+-Un puerto de internet
+Conexiión por cable al router inalámbrico
+Tarjetas de interfaz de red (NIC)
+Las tarjetas de interfaz de red conectan un dispositivo a la red. Las NIC de ethernet se usan para una conexión por cable
+
+# La capa física
+La capa física de OSI proporciona los medios de transporte de los bits que conforman una trama de la capa de enlace de datos a través de los medios de red. Esta capa acepta una trama completa desde la capa de enlace de datos y la codifica como una secuencia de señaes que componen una trama
+La capa física codifica las tramas y crea las señales eléctricas, ópticas o de ondas de radio que representan los bits en cada trama. Estas señales se envían por los medios, una a la vez
+La capa física del nodo de destino recupera estás señales individuales de los medios, las restaura a sus representaciones en bits y pasa los bits a la capa de enlace de datos en forma de trama completa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
