@@ -1,0 +1,33 @@
+# Características
+Más común en redes
+Económicos
+Fácil de instalar
+Baja resistencia a la corriente eléctrica
+Hay tres diferentes que se utilizan cada uno en situaciones específicas
+Los datos se transmiten en cables de cobre como impulsos eléctricos. Un detector en la interfaz de red de un dispositivo de destino debe recibir una señal que pueda decodificarse exitosamente para que coincida con la señal enviada. No obstane, cuanto más lejos viaja una señal, más se deteriora. Esto se denomina atenuación de señal. Por este motivo, todos los medios de cobre deben seguir limitaciones de distancia estrictas según lo especifican los estándares que los rigen
+Los valores de temporazación y voltaje de pulsos eléctricos tambien son vulnerables a las interferencias de dos fuentes:
+-Interferencai electromagnética (EMI) o interferencia de radiofrecuencia (RFI)
+Las señales de EMI y RFI pueden distorsionar y dañar las señales de datos que transportan los medios de cobre. Las posibles fuentes EMI y RFI incluyen ondas de radio y dispositivos electromagnéticos, como las luces fluorecentes o los motores eléctricos
+-Crosstalk
+Se trata de una perturbacón causada por los campos eléctricos o magnéticos de una señal de un hilo a la señal de un hilo adyacente. 
+1.Se trasnmite una señal pura
+2.En el medio, hay una señal de interferencia
+3.La señal digital está dañada por la señal de interferncia
+4.El equipo receptor lee una señal cambiada
+Para contrarrestar los efectos negativos de la EMI y RFI, algunos cables de cobre se empaquetan con un blindaje metálico y requiere una conexión a la tierra adecuada
+Para contrarrestar los efectos negativos del crosstalk, alguno dtipos de cables de cobre tienen pares de hilos de circuitos opuestos trenzados que cancelan dicho tipo de interferencia en forma efizaz
+La susceptibilidad de los cables de cobre al ruido electrónico se puede limitar utilizando estas recomendaciones
+
+
+
+
+
+
+
+
+
+
+
+
+
+
