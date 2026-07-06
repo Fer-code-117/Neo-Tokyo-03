@@ -1,0 +1,70 @@
+#  Propiedades de los medios inalámbricos
+Qué son: Tercera forma de conectarse a la capa física de una red. Transportan señales electromagnéticas mediante frecuencias de radio y microondas.
+Ventaja principal: Mejor movilidad de todos los medios; es hoy la principal forma de conexión en redes domésticas y empresariales.
+Limitaciones:
+Área de cobertura: Funciona bien en espacios abiertos, pero materiales de construcción y el terreno limitan su alcance.
+Interferencia: Vulnerable a dispositivos como teléfonos inalámbricos, luces fluorescentes y microondas.
+Seguridad: Al no requerir acceso físico a un medio, cualquier dispositivo sin autorización puede intentar acceder a la señal; la seguridad es clave en su administración.
+Medio compartido: WLAN opera en half-duplex (solo un dispositivo transmite a la vez), y se comparte entre todos los usuarios, reduciendo el ancho de banda disponible por usuario.
+Aunque lo inalámbrico crece en popularidad, el cobre y la fibra siguen siendo los medios más usados para dispositivos intermedios como routers y switches.
+
+## Tipos de medios inalambricos
+Cubren capa física y de enlace de datos, especificando: codificación de señales, frecuencia/intensidad, recepción/decodificación y diseño de antenas.
+Estandares inalambricos
+Wi-Fi (IEEE 802.11): Estándar WLAN. Usa CSMA/CA (escucha el canal antes de transmitir para evitar colisiones). Marca comercial de Wi-Fi Alliance.
+Bluetooth (IEEE 802.15): Estándar WPAN. Empareja dispositivos a distancias de 1 a 100 metros.
+WiMAX (IEEE 802.16): Acceso inalámbrico de banda ancha mediante topología punto a multipunto.
+Zigbee (IEEE 802.15.4): Baja velocidad y bajo consumo de energía, ideal para IoT y entornos 
+
+# LAN inalámbrica (WLAN)
+Permite a los dispositivos conectarse en forma inalambrica a traves de una LAN
+Dispositivos necesarios:
+Punto de acceso inalámbrico (AP): Concentra las señales de los usuarios y las conecta a la infraestructura de red basada en cobre (Ethernet). En routers domésticos suele integrar router + switch + AP en un solo dispositivo.
+Adaptadores NIC inalámbricos: Dan capacidad de comunicación inalámbrica a los hosts.
+Existen muchos estándares WLAN; al comprar equipos, verificar compatibilidad e interoperabilidad.
+Beneficios: ahorro en cableado costoso y mayor movilidad.
+Seguridad: requiere políticas y procesos estrictos para proteger la WLAN de accesos no autorizados y daños.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+industriales (ej. interruptores inalámbricos, dispositivos médicos).
