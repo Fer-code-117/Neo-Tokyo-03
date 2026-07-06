@@ -1,0 +1,35 @@
+# Direcciones hexadecimales e IPv6
+
+Hexadecimal: sistema de base 16, usa dígitos del 0 al 9 y letras de la A a la F.
+Relación binario-hexadecimal: cada 4 bits binarios equivalen a 1 dígito hexadecimal (ej. 1111 = F).
+Uso en redes: se emplea para representar direcciones IPv6 y direcciones MAC Ethernet.
+
+Estructura de una dirección IPv6:
+
+Longitud total: 128 bits.
+Formato: x:x:x:x:x:x:x:x — 8 grupos separados por dos puntos.
+Cada "x" es un hexteto: un segmento de 16 bits, representado por 4 dígitos hexadecimales.
+No distingue mayúsculas/minúsculas (se puede escribir en cualquiera de las dos).
+Equivalencia: 4 dígitos hexadecimales = 16 dígitos binarios.
+
+# Conversiones decimales a hexadecimales
+Pasos:
+Convertir el número decimal a binario de 8 bits.
+Dividir la cadena binaria en 2 grupos de 4 bits, comenzando desde la derecha.
+Convertir cada grupo de 4 bits a su dígito hexadecimal equivalente.
+Ejemplo (168 → hexadecimal):
+168 en binario = 10101000
+Dividido en grupos: 1010 y 1000
+1010 = hex A, 1000 = hex 8
+Resultado: 168 = A8 en hexadecimal.
+
+# Conversión hexadecimal a decimal
+Pasos:
+Convertir cada dígito hexadecimal a su cadena binaria de 4 bits.
+Unir las cadenas en un grupo de 8 bits, comenzando desde la derecha.
+Convertir esa cadena binaria de 8 bits a su valor decimal equivalente.
+Ejemplo (D2 → decimal):
+D2 en binario de 4 bits: 1101 y 0010
+Agrupado en 8 bits: 11010010
+11010010 en decimal = 210
+Resultado: D2 (hex) = 210 en decimal.
