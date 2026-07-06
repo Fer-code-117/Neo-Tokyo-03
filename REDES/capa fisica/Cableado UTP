@@ -7,3 +7,79 @@ Los diseñadores ahora emparejan los hilos en un circuito. Cuando dos hilos en u
 -Variando el numero de vueltas por par hilo
 Para mejorar aún más el efecto de anulación de los pares de hilos del circuito, los diseñadores cambian el número de vueltas de cada par de hilos en un cable. Los cables UTP deben seguir especificaciones precisas que rigen cuántas vueltas o trenzas se permiten por metro (3,28 ft) de cable
 Los cables UTP dependen exclusivamente del efecto de anulación producido por los pares de hilos trenzados para limitar la degradación de la señal y proporcionar un autoblindaje eficaz de los pares de hilos en los medios de red
+
+# Conectores  estándares de cableado UTP
+ cumple con los estándares establecidos en conjunto por la TIA/EIA. En particular, la TIA/EIA-568 estipula los estándares comerciales de cableado para las instalaciones LAN y es el estándar de mayor uso en entornos de cableado LAN. Algunos de los elementos definidos son los siguientes:
+Tipos de cables
+Longitudes del cable
+Conectores
+Terminación del cable
+Métodos para realizar pruebas de cable
+El Instituto de Ingenieros Eléctricos y Electrónicos (IEEE) define las características eléctricas del cableado de cobre. IEEE califica el cableado UTP según su rendimiento. Los cables se dividen en categorías según su capacidad para transportar datos de ancho de banda a velocidades mayores
+La categoría 3 se utilizó originalmente para la comunicación de voz a través de líneas de voz, pero más tarde para la transmisión de datos.
+Las categorías 5 y 5e se utilizan para la transmisión de datos. La categoría 5 soporta 100Mbps y la categoría 5e soporta 1000 Mbps
+La categoría 6 tiene un separador añadido entre cada par de cables para soportar velocidades más altas. Categoría 6 soporta hasta 10 Gbps.
+Categoría 7 también soporta 10 Gbps.
+Categoría 8 soporta 40 Gbps.
+Los cables UTP generalmente se terminan con un conector RJ-45. El estándar TIA/EIA-568 describe las asignaciones de los códigos por colores de los hilos a la asignación de pines (diagrama de pines) de los cables Ethernet
+Conectores RJ-45 para UTP
+ es el componente hembra de un dispositivo de red, pared, salida de partición de cubículo o panel de conexiones. Cuando se realizan las terminaciones de manera incorrecta, cada cable representa una posible fuente de degradación del rendimiento de la capa física.
+Socket RJ-45 para UTP
+la terminación incorrecta de los cables puede afectar el rendimiento de la transmisión.
+
+#Cables UTP directos y cruzados
+es posible que los cables UTP necesiten armarse según las diferentes convenciones para los cableados. Esto significa que los hilos individuales del cable deben conectarse en diferente orden para distintos grupos de pins en los conectores RJ-45.
+
+A continuación se mencionan los principales tipos de cables que se obtienen al utilizar convenciones específicas de cableado:
+
+Cable directo de Ethernet - El tipo más común de cable de red. Por lo general, se utiliza para interconectar un host con un switch y un switch con un router.
+Cable cruzado Ethernet - El cable utilizado para interconectar dispositivos similares. Por ejemplo, para conectar un switch a un switch, un host a un host o un router a un router. Sin embargo, los cables de cruce ahora se consideran heredados, ya que las NIC utilizan cruzado de interfaz dependiente medio (Auto-MDIX) para detectar automáticamente el tipo de cable y realizar la conexión interna.
+Cable Types and Standards
+T568A                                    
+          PAR 2
+       |---------|
+       | PAR 1   |
+PAR 3  |  |---|  |   PAR 4
+  |--| |  |   |  |  |----|
+ _______________________               
+| 1  2  3  4  5  6  7  8 |                
+| bV V  bN A  bA N  bM M |               
+ -------------------------     
+T568B
+         PAR 3
+       |---------|
+       | PAR 1   |
+PAR 2  |  |---|  |   PAR 4
+  |--| |  |   |  |  |----|
+ _______________________               
+| 1  2  3  4  5  6  7  8 |                
+| bN N  bV A  bA V  bM M |               
+ -------------------------  
+V = Verde   N = Naranja   A = Azul   M = Marrón
+b = Blanco con franja 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
