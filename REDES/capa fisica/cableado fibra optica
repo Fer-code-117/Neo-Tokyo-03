@@ -1,0 +1,96 @@
+# Propiedades del cableado de fibra óptica
+Costo y uso: Es más caro que el cobre, por eso se usa menos, pero es la mejor opción en ciertas situaciones.
+Rendimiento: Transmite datos a distancias más largas y con anchos de banda más altos que cualquier otro medio de red.
+Inmunidad: Sufre menos atenuación que el cobre y es totalmente inmune a EMI y RFI (interferencia electromagnética y de radiofrecuencia).
+Uso principal: Interconectar dispositivos de red.
+Estructura física: Es un hilo de vidrio muy puro, flexible y delgado, similar al grosor de un cabello humano.
+Funcionamiento: Los bits se codifican como pulsos de luz. El cable actúa como una "guía de ondas" o "tubería de luz", transmitiendo la señal con pérdida mínima.
+Analogía: Es como un rollo de mil metros con el interior reflectante, donde un láser envía señales en código Morse a la velocidad de la luz — así funciona la fibra óptica, pero con un diámetro mucho menor y tecnología sofisticada de emisión y recepción de luz.
+  
+## Tipos de medios de fibra
+  
+##Fibra optica monomodo (SMF)
+Núcleo: Muy pequeño (9 micrones), usa tecnología láser (cara) para enviar un solo rayo de luz.
+Trayectoria: Al ser un solo rayo, produce una única trayectoria recta para la luz.
+Uso: Ideal para largas distancias (cientos de kilómetros), como telefonía de larga distancia y televisión por cable.
+Estructura:
+Núcleo de vidrio = 9 micrones
+Revestimiento de vidrio = 125 micrones de diámetro
+Revestimiento polimérico (capa externa protectora)
+
+## fibra multimodo (MMF)
+Núcleo: Más grande (50/62.5 micrones), usa emisores LED (bajo costo) para enviar pulsos de luz en diferentes ángulos.
+Trayectoria: Permite varias trayectorias para la luz (a diferencia del monomodo).
+Uso: Muy usada en redes LAN, gracias al bajo costo de los LED.
+Rendimiento: Ancho de banda de hasta 10 Gb/s, en enlaces de hasta 550 metros.
+Estructura:
+Núcleo de vidrio = 50/62.5 micrones
+Revestimiento de vidrio = 125 micrones de diámetro
+Revestimiento externo protector
+Una de las diferencias destacadas entre MMF y SMF es la cantidad de dispersión
+MMF mayor dispersión que SMF
+
+## Uso del cableado de fibra óptica
+Se utiliza en 4 tipos de industrias:
+Redes empresariales: cableado backbone e infraestructura de interconexión.
+Fibra hasta el hogar (FTTH): banda ancha siempre activa para hogares y pequeñas empresas.
+Redes de larga distancia: usadas por proveedores de servicios para conectar países y ciudades.
+Redes de cable submarino: soluciones de alta velocidad y capacidad, resistentes a entornos hostiles, para distancias transoceánicas.
+
+# Conectores de fibra optica
+  
+## Conestores de punta directa (ST)
+Fueron los primeros tiops de conectores utilizados. EL conector se bloquea de manera segura con un mecanismo tipo bayoneta "enroscable/desenroscable"
+
+  ## Conectores suscriptor (SC)
+a veces se denominan conector cuadrado o conector estandar. Es un conector LAN y WAN ampliamente adoptado que utiliza un mecanismo de inserción/extracción para asegurar la inserción correcta. Este tipo se utiliza con fibra optica MMF y SMF
+
+## Conectores Lucent (LC) Conectores Simplex
+Son una versión más pequeña del conector SC, Se denominan conectores peuqeños o locales y están rápidamente en popularidad debido a su tamaño más pequeño
+
+## DUplex
+Un conector LC duplex es similar a un conector LC simplex, pero son dos
+
+# Cables de fibra optica
+Función: Interconectar dispositivos de infraestructura.
+Código de color:
+Amarillo → fibra monomodo
+Naranja  → fibra multimodo
+Tipos de cables de conexión (según conectores):
+Multimodo SC-SC
+Monomodo LC-LC
+Multimodo ST-LC
+Monomodo SC-ST
+
+  # Fibra optica VS UTP
+Uso principal: En entornos empresariales, la fibra óptica se usa como cableado troncal para conexiones punto a punto de alto tráfico y para interconectar edificios en campus.
+Ventaja clave: No conduce electricidad y tiene baja pérdida de señal, ideal para estos usos.
+Comparación UTP vs Fibra óptica:
+Aspecto
+*Cableado UTP Ancho de banda10 Mb/s – 10 Gb/s
+Fibra óptica10 Mb/s – 100 Gb/s
+*DistanciaCorta (1 a 100 metros)
+Larga (1 – 100,000 metros)
+Inmunidad a EMI/RFI 
+*Baja 
+ Alta (totalmente inmune)
+Inmunidad a peligros eléctricos 
+*Baja
+Alta (totalmente inmune)
+Costo de medios/conectores
+*Más bajo
+Más alto
+Habilidades de instalación
+*Menos exigentes
+Más exigentes
+Precauciones de seguridad
+*Menores
+Mayores
+
+
+
+
+
+
+
+
