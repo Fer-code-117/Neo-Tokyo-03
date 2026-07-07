@@ -1,4 +1,4 @@
-# 7.1.1 Encapsulamiento de Ethernet
+# Encapsulamiento de Ethernet
 Ethernet: una de las dos tecnologías LAN usadas hoy (la otra es WLAN). Usa comunicaciones por cable: pares trenzados, fibra óptica y cables coaxiales.
 Funciona en la capa de enlace de datos y la capa física. Es una familia de tecnologías definida por los estándares IEEE 802.2 y 802.3.
 Anchos de banda soportados por Ethernet:
@@ -17,4 +17,65 @@ MAC (Control de acceso a medios) → estándar IEEE 802.3
 La capa física también forma parte del estándar 802.3.
 En resumen: Ethernet = IEEE 802.2 (LLC) + IEEE 802.3 (MAC + Física).
 
+#  Subcapas de enlace de datos
+Los protocolos IEEE 802 LAN/MAN (incluyendo Ethernet) usan 2 subcapas independientes:
 
+Subcapa LLC (IEEE 802.2):
+Comunica el software de red (capas superiores) con el hardware del dispositivo (capas inferiores).
+Coloca en la trama información que identifica qué protocolo de capa de red se usa.
+Permite que múltiples protocolos de Capa 3 (IPv4, IPv6) usen la misma interfaz de red y medios.
+Subcapa MAC (IEEE 802.3, 802.11 o 802.15):
+Se implementa en hardware.
+Responsable de la encapsulación de datos y control de acceso a medios.
+Proporciona el direccionamiento de la capa de enlace de datos.
+Se integra con distintas tecnologías de capa física:
+Ethernet (802.3) → cable
+WLAN (802.11) → comunicaciones inalámbricas
+WPAN (802.15) → Bluetooth, RFID, etc. (fuente de alimentación)
+
+# Subcapa MAC
+
+La subcapa MAC es responsable de la encapsulación de datos y el acceso a los medios.
+La encapsulación de datos IEEE 802.3 incluye:
+Trama de Ethernet: estructura interna de la trama.
+Direccionamiento Ethernet: usa dirección MAC de origen y destino para entregar la trama entre NIC en la misma LAN.
+Detección de errores Ethernet: usa FCS (Frame Check Sequence, secuencia de verificación de trama) para detectar errores.
+La subcapa MAC IEEE 802.3 incluye especificaciones para distintos estándares Ethernet sobre cobre y fibra.
+Estándares Ethernet en la subcapa MAC
+
+Capa de Enlace de datos se divide en dos subcapas: LLC (Logical Link Control) y MAC (Media Access Control).
+Subcapa LLC: definida por IEEE 802.2, se comunica con el protocolo de capa de red.
+Subcapa MAC: definida por Ethernet IEEE 802.3, conecta con la capa física.
+Estándares específicos dentro de IEEE 802.3:
+IEEE 802.3u – Fast Ethernet.
+IEEE 802.3z – Gigabit Ethernet por fibra.
+IEEE 802.3ab – Gigabit Ethernet por cobre.
+IEEE 802.3ae – 10 Gigabit Ethernet por fibra.
+Ethernet heredada vs. Ethernet actual
+
+Ethernet heredada: topología de bus o hubs, medio compartido, medio dúplex.
+Usa CSMA/CD (Carrier Sense Multiple Access/Collision Detection): acceso por contención que garantiza que solo un dispositivo transmita a la vez.
+CSMA/CD detecta colisiones cuando más de un dispositivo transmite simultáneamente y aplica un algoritmo de retroceso para retransmitir.
+Las LAN Ethernet actuales usan switches en dúplex completo.
+En comunicaciones dúplex completo con switches, no se requiere CSMA/CD.
+
+# Campos de trama de Ethernet
+
+Tamaño de trama Ethernet: mínimo 64 bytes, máximo 1518 bytes.
+Este rango incluye todos los bytes desde la dirección MAC de destino hasta el FCS (no incluye el preámbulo).
+Tramas menores a 64 bytes = fragmento de colisión o trama corta → se descartan automáticamente.
+Tramas mayores a 1500 bytes de datos se consideran "jumbo" o "tramas bebés gigantes".
+Si el tamaño no cumple el mínimo/máximo, el receptor descarta la trama (puede deberse a colisiones u otras señales no deseadas).
+Las tramas jumbo suelen ser compatibles con la mayoría de switches y NIC Fast Ethernet/Gigabit Ethernet.
+Campos de trama Ethernet (estructura completa: 64–1518 octetos)
+
+Preámbulo y SFD (8 bytes): sincronización entre emisor y receptor; avisa a los nodos receptores que se prepare para recibir una trama nueva.
+Dirección MAC de destino (6 bytes): identifica al receptor deseado; puede ser unicast, multicast o broadcast.
+Dirección MAC de origen (6 bytes): identifica la NIC o interfaz de origen de la trama.
+Tipo/Longitud (2 bytes): identifica el protocolo de capa superior encapsulado.
+0x800 = IPv4
+0x86DD = IPv6
+0x806 = ARP
+También se conoce como EtherType, Type o Length.
+Datos (46–1500 bytes): PDU de Capa 3 encapsulada (típicamente un paquete IPv4). Si el paquete es pequeño, se agregan bits de relleno (pad) para llegar al mínimo de 64 bytes.
+FCS (Frame Check Sequence, 4 bytes): detecta errores mediante CRC (comprobación cíclica de redundancia). El emisor calcula un CRC y el receptor genera otro para comparar; si no coinciden, la trama se descarta (indica cambio en los datos, posiblemente por interrupción de señales eléctricas).
