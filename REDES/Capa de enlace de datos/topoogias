@@ -1,0 +1,122 @@
+#  Topologías física y lógica
+Topología de red: configuración o relación de los dispositivos de red y sus interconexiones.
+La capa de enlace de datos necesita conocer la topología lógica para determinar cómo transferir tramas entre dispositivos.
+Dos tipos de topologías:
+
+Topología física: identifica las conexiones físicas reales — cómo se interconectan dispositivos finales e intermedios (routers, switches, APs). Incluye detalles como ubicación de habitación o posición en el rack. Generalmente son punto a punto o en estrella.
+Topología lógica: se refiere a cómo la red transfiere tramas de un nodo a otro. Identifica las conexiones virtuales mediante interfaces de dispositivo y esquemas de direccionamiento IP (Capa 3).
+La capa de enlace de datos "ve" la topología lógica de la red — es esta la que influye en el tipo de trama usada y el control de acceso a los medios.
+Ejemplo de la figura:
+
+Topología física: muestra ubicaciones reales (sala de servidores, racks, habitaciones/salones de clase) y cómo están cableados R1, S1-S5 y los servidores.
+Topología lógica: muestra las redes IP (ej. 192.168.10.0/24, 192.168.100.0/24, etc.) y cómo R1 interconecta cada segmento hacia Internet, independientemente de la ubicación física.
+
+# Topologías de WAN
+Tres topologías físicas comunes para interconectar WAN:
+
+Punto a punto: la más simple y común. Es un enlace permanente entre dos terminales (extremos).
+Hub and Spoke (en estrella): versión WAN de la topología en estrella. Un sitio central interconecta sitios de sucursal mediante enlaces punto a punto. Las sucursales no pueden intercambiar datos entre sí sin pasar por el sitio central.
+Malla: ofrece alta disponibilidad, pero requiere que cada sistema final esté interconectado con todos los demás. Cada enlace es en realidad un enlace punto a punto hacia el otro nodo. Los costos administrativos y físicos pueden ser altos.
+Híbrido: es una variación o combinación de topologías. Ejemplo: una malla parcial, donde algunos (pero no todos) los dispositivos finales están interconectados entre sí.
+Topología WAN de punto a punto
+Conexión directa: conecta dos nodos directamente; no comparten los medios con otros hosts.
+Con protocolos de comunicación en serie (ej. PPP), un nodo no necesita determinar si una trama es para él u otro nodo — por lo tanto, los protocolos de enlace de datos pueden ser muy simples.
+Las tramas solo se transfieren entre esos dos nodos: se colocan en un extremo y se toman en el otro.
+Limitación: las topologías punto a punto están limitadas a dos nodos.
+Nota importante:
+
+Una conexión punto a punto sobre Ethernet sí requiere que el dispositivo determine si la trama entrante es para él.
+El origen y destino pueden estar conectados indirectamente a través de dispositivos intermedios y distancia geográfica — pero esto no cambia la topología lógica: sigue siendo una conexión lógica punto a punto, aunque físicamente haya más equipos de por medio.
+
+# Topologías de LAN
+LAN multiacceso: los nodos están interconectados usando topología estrella o estrella extendida, conectados a un dispositivo intermediario central (switch Ethernet).
+Estrella extendida: interconecta varios switches Ethernet. Fácil de instalar, muy escalable, y fácil de resolver problemas.
+A veces solo hay 2 dispositivos conectados en la LAN Ethernet (ej. routers interconectados) — esto sería un ejemplo de topología punto a punto.
+Topologías LAN heredadas (tecnologías antiguas):
+
+Bus: todos los sistemas finales se encadenan entre sí y terminan en cada extremo. No requiere dispositivos de infraestructura (switches). Usaba cables coaxiales, económico y fácil de configurar.
+Anillo: los sistemas finales se conectan a su vecino, formando un círculo cerrado (no requiere terminación). Usado por FDDI y Token Ring.
+Resumen de las 4 topologías físicas:
+
+Estrella (simple)
+Estrella extendida
+Bus
+Anillo
+
+# Comunicación Dúplex completo y semidúplex
+Importancia: clave para entender las topologías LAN, ya que se refiere a la dirección de transmisión de datos entre dos dispositivos.
+Semidúplex:
+
+Ambos dispositivos pueden transmitir y recibir, pero no simultáneamente.
+Solo un dispositivo envía o recibe a la vez en el medio compartido.
+Usado en WLAN y en topologías de bus heredadas con hubs/switches Ethernet.
+Dúplex completo:
+
+Ambos dispositivos pueden transmitir y recibir simultáneamente.
+La capa de enlace de datos asume que el medio está disponible para ambos nodos en cualquier momento.
+Los switches Ethernet operan en dúplex completo por defecto, aunque pueden funcionar en semidúplex si se conectan a dispositivos externos que lo requieran.
+Punto clave (compatibilidad):
+
+Dos interfaces interconectadas (ej. NIC de un host y una interfaz de switch) deben operar en el mismo modo dúplex.
+Si no coinciden, se genera incompatibilidad de dúplex, causando ineficiencia y latencia en el enlace.
+
+# Métodos de control de acceso
+Red multiacceso: red donde 2 o más dispositivos finales pueden intentar acceder simultáneamente (ej. LAN Ethernet y WLAN).
+Dos métodos básicos de control de acceso para medios compartidos:
+
+Acceso basado en contención
+Todos los nodos operan en semidúplex, compitiendo por el uso del medio.
+Solo un dispositivo puede enviar a la vez → puede haber colisiones si transmiten simultáneamente.
+Ejemplos:
+CSMA/CD (detección de colisiones) — usado en LAN Ethernet de topología de bus heredada.
+CSMA/CA (prevención de colisiones) — usado en LAN inalámbricas (WLAN).
+Acceso controlado
+Cada nodo tiene su propio tiempo para usar el medio (turnos).
+Es un método determinista, pero poco eficiente, ya que un dispositivo debe esperar su turno aunque el medio esté libre.
+Ejemplos: Token Ring heredado, ARCNET heredado.
+Nota: Hoy en día las redes Ethernet funcionan en dúplex completo y no requieren ningún método de control de acceso.
+
+# Acceso por contención – CSMA/CD
+Ejemplos de redes de acceso por contención:
+
+LAN inalámbrica → usa CSMA/CA
+LAN Ethernet de topología de bus heredada → usa CSMA/CD
+LAN Ethernet heredada con hub → usa CSMA/CD
+Funcionamiento:
+
+Estas redes operan en semidúplex: solo un dispositivo puede enviar o recibir a la vez.
+Se necesita un proceso para gestionar cuándo puede enviar un dispositivo y qué pasa si varios transmiten simultáneamente.
+Detección de colisiones (CD):
+
+Si dos dispositivos transmiten al mismo tiempo, ocurre una colisión.
+Ambos dispositivos la detectan: la NIC compara los datos transmitidos con los recibidos, o detecta que la amplitud de la señal es más alta de lo normal.
+Los datos enviados por ambos se dañan y deben reenviarse.
+
+
+Proceso CSMA/CD con hub Ethernet (ejemplo PC1 → PC3)
+Paso 1 – PC1 envía una trama:
+La NIC de PC1 verifica si algún dispositivo está transmitiendo en el medio (detecta portadora).
+Si no detecta señal, asume que el medio está disponible y envía la trama Ethernet hacia PC3.
+Paso 2 – El hub recibe la trama:
+El hub (también llamado repetidor multipuerto) recibe la trama y regenera los bits, enviándolos a todos los demás puertos.
+Si otro dispositivo (ej. PC2) quiere transmitir mientras recibe una trama, debe esperar hasta que el canal esté libre.
+Paso 3 – El hub envía la trama:
+Todos los dispositivos conectados reciben la trama.
+Solo el dispositivo cuya dirección de destino coincide (PC3) acepta y copia la trama completa.
+Los demás dispositivos (PC2) la ignoran, ya que no va dirigida a ellos.
+
+# Acceso por contención – CSMA/CA
+Uso: utilizado por WLAN (IEEE 802.11). Similar a CSMA/CD para detectar si el medio está libre, pero con técnicas adicionales.
+Diferencia clave: en entornos inalámbricos, un dispositivo puede no detectar una colisión. Por eso CSMA/CA no detecta colisiones, sino que intenta evitarlas.
+Cómo funciona:
+
+Cada dispositivo que transmite incluye en su trama la duración que necesita para transmitir.
+Todos los demás dispositivos inalámbricos reciben esa información y saben durante cuánto tiempo el medio no estará disponible.
+Ejemplo: si el host A recibe una trama desde el punto de acceso, los hosts B y C también verán la trama y sabrán cuánto tiempo deben esperar antes de intentar transmitir.
+Acuse de recibo:
+
+Tras enviar una trama 802.11, el receptor devuelve un acuse de recibo para confirmar al emisor que la trama fue recibida.
+Limitación general:
+
+Tanto en LAN Ethernet con hubs como en WLAN, los sistemas por contención no escalan bien bajo uso intensivo del medio.
+Nota: Las redes LAN Ethernet con switches no usan sistemas por contención, ya que el switch y la NIC del host operan en modo dúplex completo.
