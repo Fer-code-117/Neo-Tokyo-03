@@ -1,0 +1,112 @@
+# La trama
+Función: la capa de enlace de datos prepara los datos encapsulados (paquete IPv4/IPv6) para el transporte por los medios locales, encapsulándolos con un encabezado y un tráiler para formar una trama.
+Es responsable de las comunicaciones NIC a NIC dentro de la misma red.
+Partes básicas de toda trama:
+
+Encabezado
+Datos
+Tráiler
+Diferencia clave: a diferencia de otros protocolos de encapsulación, la capa de enlace de datos agrega información también en forma de tráiler al final de la trama.
+
+Variabilidad de la trama:
+
+No existe una única estructura de trama válida para todos los medios y entornos.
+La cantidad de información de control varía según los requisitos del medio y la topología lógica.
+Ejemplo: una trama WLAN necesita más información de control (para evitar colisiones) que una trama Ethernet.
+En entornos "frágiles" (ej. comunicación satelital, mostrado en la figura) se requieren más controles para garantizar la entrega — esto significa encabezados/tráilers más grandes, pero también mayor sobrecarga y velocidades de transmisión más lentas.
+
+# Campos de trama
+Tramado: rompe la transmisión en agrupaciones descifrables, con información de control en campos del encabezado y tráiler. Los estándares de cada protocolo definen el formato real de la trama (no todos incluyen todos los campos).
+Estructura general: Encabezado + Paquete (Datos) + Tráiler
+
+Campos genéricos de una trama:
+
+Inicio de trama / Detención de trama: indicadores que marcan los límites de comienzo y finalización de la trama.
+Direccionamiento: indica los nodos de origen y destino en los medios.
+Tipo: identifica el protocolo de Capa 3 contenido en el campo de datos.
+Control: identifica servicios especiales de control de flujo, como QoS (calidad de servicio), que da prioridad a ciertos mensajes (ej. voz sobre IP/VoIP, sensible al retraso).
+Datos: contiene el contenido de la trama (encabezado del paquete, encabezado del segmento y los datos).
+Detección de errores: va después de los datos, forma parte del tráiler.
+Detección de errores (detalle):
+
+La capa de enlace de datos agrega esta función porque las señales en los medios pueden sufrir interferencia, distorsión o pérdida.
+El nodo emisor crea un resumen lógico llamado CRC (valor de comprobación de redundancia cíclica).
+Este valor se coloca en el campo FCS (Secuencia de Verificación de Trama) del tráiler.
+El FCS permite al nodo receptor determinar si la trama sufrió errores de transmisión.
+
+# Direcciones de Capa 2
+Función: la capa de enlace de datos proporciona el direccionamiento usado para transportar una trama por un medio local compartido. Estas direcciones se llaman direcciones físicas.
+Van contenidas en el encabezado de la trama y especifican el nodo de destino en la red local (normalmente al inicio de la trama, para que la NIC compruebe rápido si coincide). También puede incluir la dirección de origen.
+Diferencia con las direcciones de Capa 3 (lógicas):
+
+Las direcciones lógicas (IP) son jerárquicas e indican en qué red está el dispositivo.
+Las direcciones físicas (Capa 2) no indican la ubicación de red: son únicas por dispositivo y permanecen iguales aunque el dispositivo cambie de red o subred.
+Por eso, las direcciones de Capa 2 solo sirven para conectar dispositivos dentro del mismo medio compartido, en la misma red IP.
+Reencapsulamiento en el recorrido:
+
+Cuando un paquete IP viaja de host → router → router → host, en cada punto del recorrido se encapsula en una nueva trama de enlace de datos.
+Cada trama contiene la dirección origen (NIC que envía) y destino (NIC que recibe) correspondientes a ese salto específico.
+
+Reencapsulamiento por salto (PC1 → Servidor web)
+En cada salto, el paquete IP (Capa 3) se mantiene igual, pero se reencapsula en una nueva trama de Capa 2, cambiando las direcciones de origen/destino de la NIC según el tramo:
+
+1. Host a router (PC1 → R1):
+
+El host origen encapsula el paquete IP en una trama de Capa 2.
+Encabezado L2: NIC origen = PC1, NIC destino = R1.
+2. Router a router (R1 → R2):
+
+R1 desencapsula la trama recibida y crea una nueva trama de Capa 2.
+Encabezado L2: NIC origen = R1, NIC destino = R2.
+3. Router a host (R2 → Servidor web):
+
+R2 desencapsula y crea otra nueva trama de Capa 2.
+Encabezado L2: NIC origen = R2, NIC destino = Servidor web.
+Lo que permanece constante en todo el recorrido (Capa 3 / paquete IP):
+
+IP de origen: 192.168.1.110 (PC1)
+IP de destino: 172.16.1.99 (Servidor web)
+Conclusión clave: las direcciones de Capa 2 cambian en cada salto, mientras que las direcciones de Capa 3 (IP) permanecen iguales durante todo el trayecto de extremo a extremo.
+
+Direcciones de Capa 2 vs Capa 3 (resumen)
+Dirección de Capa 2: solo se usa para la entrega local. No tiene significado más allá de la red local.
+Dirección de Capa 3 (IP): en cambio, permanece del host de origen al host de destino durante toda la ruta, sin importar cuántos saltos de red existan.
+Cuando los datos deben pasar a otro segmento de red:
+
+Se necesita un dispositivo intermediario, como un router.
+El router:
+Acepta la trama según la dirección física (Capa 2).
+La desencapsula para examinar la dirección IP (jerárquica, Capa 3).
+Con la IP, determina la ubicación de red del destino y la mejor ruta hacia él.
+Crea una nueva trama para el paquete.
+Envía la nueva trama al siguiente segmento de red hacia el destino final.
+
+# Tramas LAN y WAN
+LAN cableadas: usan protocolos Ethernet.
+Comunicaciones inalámbricas: usan protocolos WLAN (IEEE 802.11).
+Ambos fueron diseñados para redes multiacceso.
+Protocolos WAN tradicionales (para topologías punto a punto, hub-spoke y malla completa):
+
+Protocolo punto a punto (PPP)
+Control de enlace de datos de alto nivel (HDLC)
+Frame Relay
+Modo de transferencia asíncrona (ATM)
+X.25
+Nota: estos protocolos de Capa 2 en WAN están siendo reemplazados progresivamente por Ethernet.
+
+Puntos clave:
+
+En una red TCP/IP, todos los protocolos de Capa 2 funcionan con la dirección IP de Capa 3, pero el protocolo específico de Capa 2 depende de la topología lógica y los medios físicos.
+Cada protocolo realiza el control de acceso a medios para su topología. Los dispositivos que operan en esta capa incluyen NICs, interfaces de routers y switches.
+El protocolo de Capa 2 usado depende de la tecnología implementada, que a su vez depende del tamaño de la red (cantidad de hosts, alcance geográfico y servicios).
+LAN vs WAN (por qué usan protocolos distintos):
+
+LAN: área pequeña, alta densidad de usuarios → usa tecnología de alto ancho de banda, rentable a esa escala.
+WAN: cubre grandes áreas geográficas → el costo de enlaces de larga distancia generalmente resulta en menor ancho de banda disponible.
+Protocolos de la capa de enlace de datos (resumen):
+
+Ethernet
+802.11 inalámbrico
+PPP
+HDLC
+Frame Relay
