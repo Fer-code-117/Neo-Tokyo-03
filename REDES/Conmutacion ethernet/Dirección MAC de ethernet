@@ -1,0 +1,116 @@
+# Dirección MAC y hexadecimal
+
+IPv4: se representa en sistema decimal (base 10) y binario (base 2).
+IPv6 y direcciones Ethernet: se representan en sistema hexadecimal (base 16).
+Sistema hexadecimal usa dígitos 0-9 y letras A-F.
+Una dirección MAC Ethernet consta de un valor binario de 48 bits.
+Un solo dígito hexadecimal representa 4 bits binarios → por eso una dirección MAC de 48 bits se expresa con solo 12 valores hexadecimales.
+8 bits (1 byte) es la agrupación binaria común: el rango de 00000000 a 11111111 en binario equivale al rango 00 a FF en hexadecimal.
+Equivalentes decimales, binarios y hexadecimales seleccionados
+
+Los ceros iniciales siempre se muestran en hexadecimal para completar la representación de 8 bits (ejemplo: binario 0000 1010 → hexadecimal 0A).
+Los números hexadecimales suelen representarse precedidos por 0x (ejemplo: 0x73) para diferenciarlos de valores decimales.
+Alternativa de representación: subíndice 16, o el número seguido de H (ejemplo: 73H).
+Para convertir entre decimal y hexadecimal, generalmente es más fácil pasar primero por binario como paso intermedio.
+Ejemplos clave de la tabla:
+Decimal 10 = Binario 0000 1010 = Hex 0A
+Decimal 202 = Binario 1100 1010 = Hex CA
+Decimal 255 = Binario 1111 1111 = Hex FF
+
+#  Dirección MAC de Ethernet
+
+La dirección MAC identifica los dispositivos físicos de origen y destino (NIC) en el segmento de red local (LAN Ethernet).
+Proporciona un método de identificación del dispositivo en la capa de enlace de datos del modelo OSI.
+Una dirección MAC Ethernet es de 48 bits, expresada con 12 dígitos hexadecimales = 6 bytes de longitud.
+Todas las direcciones MAC deben ser únicas para el dispositivo/interfaz Ethernet.
+Todo proveedor de dispositivos Ethernet debe registrarse con el IEEE para obtener un código hexadecimal único de 6 dígitos (24 bits o 3 bytes) llamado OUI (Identificador Único de Organización).
+Estructura de la dirección MAC (OUI + asignado por el proveedor)
+
+Al asignar una dirección MAC, el proveedor debe:
+Usar su OUI asignado como los primeros 6 dígitos hexadecimales.
+Asignar un valor único en los últimos 6 dígitos hexadecimales.
+Estructura resultante: OUI (6 hex) + valor asignado por el proveedor (6 hex).
+Ejemplo: IEEE asignó a Cisco el OUI 00-60-2F. Cisco configura el dispositivo con el código único 3A-07-BC → dirección MAC final: 00-60-2F-3A-07-BC.
+Es responsabilidad del proveedor garantizar que ningún dispositivo tenga la misma dirección MAC.
+Pueden existir direcciones MAC duplicadas por errores de fabricación, errores en implementaciones de máquinas virtuales, o modificaciones por software.
+En esos casos, es necesario modificar la dirección MAC con una nueva NIC o mediante modificaciones por software.
+
+# 7.2.3 Procesamiento de tramas
+
+La dirección MAC también se conoce como BIA (Burned-In Address / dirección grabada), codificada en la ROM (memoria de solo lectura) de la NIC de forma permanente.
+En sistemas operativos y NIC modernos, sí es posible cambiar la dirección MAC por software → esto hace que el filtrado o control de tráfico basado en MAC ya no sea tan seguro.
+Al iniciar la computadora, la NIC copia su dirección MAC de la ROM a la RAM.
+El encabezado Ethernet incluye:
+Dirección MAC de origen: la del dispositivo que envía.
+Dirección MAC de destino: la del dispositivo receptor.
+Procesamiento de tramas — verificación por NIC
+
+Cuando una NIC recibe una trama, compara la dirección MAC de destino con su propia dirección MAC física almacenada en RAM.
+Si no coincide → descarta la trama.
+Si coincide → envía la trama a las capas OSI para el proceso de desencapsulamiento.
+Las NIC también aceptan tramas si la dirección MAC de destino es broadcast o un grupo multicast del que el host es miembro.
+Cualquier dispositivo origen o destino de una trama Ethernet requiere una NIC Ethernet y, por lo tanto, una dirección MAC (estaciones de trabajo, servidores, impresoras, dispositivos móviles, routers).
+
+# Dirección MAC de unicast
+
+En Ethernet se usan diferentes direcciones MAC para comunicaciones unicast, broadcast y multicast de Capa 2.
+Dirección MAC de unicast: dirección única usada al enviar una trama desde un único dispositivo de origen a un único dispositivo de destino.
+En el ejemplo de la animación: host origen 192.168.1.5 (MAC 00-07-E9-63-CE-53) solicita una página al servidor 192.168.1.200 (MAC 00-07-E9-42-AC-28).
+Ejemplo de trama Ethernet — direccionamiento
+
+Para enviar/recibir un paquete unicast, se necesitan:
+Dirección IP de destino en el encabezado del paquete IP.
+Dirección MAC de destino correspondiente en el encabezado de la trama Ethernet.
+Las direcciones IP y MAC se combinan para la distribución de datos a un host específico.
+ARP (Protocolo de resolución de direcciones): proceso que usa un host de origen para determinar la dirección MAC asociada a una dirección IPv4.
+ND (Neighbor Discovery): proceso equivalente para determinar la dirección MAC asociada a una dirección IPv6.
+Nota importante: la dirección MAC de origen siempre debe ser unicast.
+
+# Dirección MAC broadcast
+
+Cada dispositivo de la LAN Ethernet recibe y procesa una trama de broadcast Ethernet.
+Características de una transmisión Ethernet broadcast:
+Dirección MAC de destino: FF-FF-FF-FF-FF-FF en hexadecimal (48 unidades en binario).
+Se inunda en todos los puertos del switch, excepto el puerto entrante.
+No es reenviada por un router.
+Si los datos encapsulados son un paquete broadcast IPv4, el paquete contiene una dirección IPv4 de destino con todos los 1s en la parte del host → todos los hosts de esa red local (dominio de broadcast) reciben y procesan el paquete.
+Ejemplo de trama broadcast
+
+Host origen: 192.168.1.5, MAC 00-07-E9-63-CE-53.
+Dirección IPv4 de destino (broadcast): 192.168.1.255.
+Dirección MAC de destino: FF-FF-FF-FF-FF-FF.
+DHCP para IPv4 es un ejemplo de protocolo que utiliza direcciones de broadcast Ethernet e IPv4.
+No todas las transmisiones Ethernet llevan un paquete broadcast IPv4: por ejemplo, las solicitudes ARP no utilizan IPv4, pero el mensaje ARP sí se envía como broadcast Ethernet.
+
+# Dirección MAC de multicast
+
+Una trama multicast de Ethernet es recibida y procesada por un grupo de dispositivos en la LAN que pertenecen al mismo grupo multicast.
+Características de una multicast Ethernet:
+Dirección MAC de destino 01-00-5E cuando los datos encapsulados son un paquete multicast IPv4.
+Dirección MAC de destino 33-33 cuando los datos encapsulados son un paquete multicast IPv6.
+Existen otras direcciones MAC de destino multicast reservadas para datos no IP, como STP (Spanning Tree Protocol) y LLDP (Link Layer Discovery Protocol).
+Se inunda en todos los puertos del switch (excepto el entrante), a menos que el switch esté configurado para indagación de multicast.
+No es reenviada por un router, a menos que esté configurado para enrutar paquetes multicast.
+Direccionamiento IP y MAC en multicast
+
+Los dispositivos que pertenecen a un grupo multicast reciben una dirección IP de grupo de multicast.
+Rango de direcciones multicast IPv4: 224.0.0.0 a 239.255.255.255.
+Rango de direcciones multicast IPv6: comienza con ff00::/8.
+Las direcciones multicast representan un grupo de direcciones (grupo de hosts), por lo que solo se usan como destino de un paquete — el origen siempre es unicast.
+La dirección IP de multicast requiere una dirección MAC de multicast correspondiente para entregar tramas en la red local.
+Los protocolos de enrutamiento y otros protocolos de red utilizan direccionamiento multicast; también aplicaciones de video e imágenes, aunque son menos comunes.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
