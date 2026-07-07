@@ -1,0 +1,20 @@
+# 7.1.1 Encapsulamiento de Ethernet
+Ethernet: una de las dos tecnologías LAN usadas hoy (la otra es WLAN). Usa comunicaciones por cable: pares trenzados, fibra óptica y cables coaxiales.
+Funciona en la capa de enlace de datos y la capa física. Es una familia de tecnologías definida por los estándares IEEE 802.2 y 802.3.
+Anchos de banda soportados por Ethernet:
+
+10 Mbps
+100 Mbps
+1000 Mbps (1 Gbps)
+10,000 Mbps (10 Gbps)
+40,000 Mbps (40 Gbps)
+100,000 Mbps (100 Gbps)
+Ethernet y el modelo OSI:
+
+La capa de enlace de datos se divide en 2 subcapas dentro de Ethernet:
+LLC (Control de enlace lógico) → estándar IEEE 802.2
+MAC (Control de acceso a medios) → estándar IEEE 802.3
+La capa física también forma parte del estándar 802.3.
+En resumen: Ethernet = IEEE 802.2 (LLC) + IEEE 802.3 (MAC + Física).
+
+
