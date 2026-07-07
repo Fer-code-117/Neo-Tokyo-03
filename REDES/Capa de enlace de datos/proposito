@@ -1,0 +1,77 @@
+# La capa de enlace de datos
+Función principal: Prepara los datos de red (Capa 3) para ser transmitidos en la red física. Es responsable de las comunicaciones NIC a NIC.
+Funciones clave:
+
+Permite que las capas superiores accedan a los medios, sin necesidad de conocer el tipo de medio usado.
+Acepta paquetes de Capa 3 (IPv4/IPv6) y los encapsula en tramas de Capa 2.
+Controla cómo los datos se colocan y reciben en los medios.
+Intercambia tramas entre puntos finales a través de los medios de red.
+Recibe datos encapsulados y los dirige al protocolo de capa superior correspondiente.
+Realiza detección de errores y rechaza tramas dañadas.
+
+Nodo: dispositivo capaz de recibir, crear, almacenar o reenviar datos en una red (dispositivo final como PC/móvil, o intermediario como un switch).
+Sin la capa de enlace de datos: el protocolo de capa de red (IP) tendría que adaptarse él mismo a cada tipo de medio existente, lo cual sería muy ineficiente.
+Función de la capa de enlace de datos:
+Agrega información de destino y origen a nivel Ethernet (NIC) al paquete de Capa 3.
+Luego convierte esa información a un formato compatible con la Capa física (Capa 1).
+Encabezado L2 (Capa 2)	NIC de destino NIC de origen
+Paquete IP L3 (Capa 3)  IP de origen (192.168.1.110) IP de destino (192.168.1.5)
+
+# Subcapas de enlace de datos IEEE 802 LAN/MAN
+Contexto: Los estándares IEEE 802 aplican a LAN Ethernet, LAN inalámbrica (WLAN), redes de área personal inalámbrica (WPAN), entre otras. La capa de enlace de datos se divide en 2 subcapas.
+Subcapas:
+LLC (Control de enlace lógico) – IEEE 802.2:
+Comunica el software de red (capas superiores) con el hardware (capas inferiores).
+Identifica en la trama qué protocolo de Capa 3 se está usando.
+Permite que múltiples protocolos (IPv4, IPv6) usen la misma interfaz de red y medios.
+MAC (Control de acceso a medios):
+Se implementa en hardware (según IEEE 802.3, 802.11 u 802.15).
+Responsable de la encapsulación de datos y control de acceso a los medios.
+Proporciona el direccionamiento de la capa de enlace de datos.
+Se integra con distintas tecnologías de capa física, como:
+Ethernet (IEEE 802.3)
+WLAN (IEEE 802.11)
+WPAN (IEEE 802.15) — Bluetooth, RFID, etc.
+
+Subcapas LLC y MAC (continuación)
+Subcapa LLC: toma los datos del protocolo de red (paquete IPv4/IPv6) y agrega información de control de Capa 2 para ayudar a entregarlo al nodo destino.
+Subcapa MAC: controla la NIC y el hardware responsable de enviar/recibir datos en el medio LAN/MAN (cableado o inalámbrico).
+Encapsulación de datos (funciones de la subcapa MAC):
+
+Delimitación de tramas: el entramado agrega delimitadores que identifican el grupo de bits de una trama, sincronizando a los nodos emisor y receptor.
+Direccionamiento: proporciona direcciones de origen y destino para transportar la trama de Capa 2 entre dispositivos en el mismo medio compartido.
+Detección de errores: cada trama incluye un tráiler usado para detectar errores de transmisión.
+Control de acceso a medios:
+Permite que varios dispositivos se comuniquen en un medio compartido (semidúplex).
+Las comunicaciones dúplex completo no requieren control de acceso.
+
+# Provisión de acceso a los medios
+Contexto: Cada entorno de red que atraviesan los paquetes puede tener características distintas (ej. LAN Ethernet con múltiples hosts vs. enlaces serie punto a punto).
+LAN Ethernet: muchos hosts compiten por el medio → la subcapa MAC resuelve el acceso.
+Enlaces serie: conexión directa entre solo 2 dispositivos (generalmente routers) → no requieren las técnicas de la subcapa MAC IEEE 802.
+Las interfaces del router encapsulan el paquete en la trama apropiada según el método de acceso a medios correspondiente.
+Funciones de Capa 2 que realiza un router en cada salto:
+Acepta una trama proveniente de un medio.
+Desencapsula la trama.
+Vuelve a encapsular el paquete en una trama nueva.
+Reenvía la nueva trama al medio del siguiente segmento de red.
+Ejemplo: un router con interfaz Ethernet (LAN) y serial (WAN) recibe la trama, extrae la PDU de Capa 3, la reencapsula en una trama nueva adecuada al siguiente medio, y la reenvía.
+
+# Estándares de la capa de enlace de datos
+Diferencia clave: A diferencia de las capas superiores de TCP/IP (definidas por RFC y mantenidas por el IETF), los protocolos de la capa de enlace de datos no están definidos por RFC.
+El IETF no define las funciones ni el funcionamiento de la capa de acceso a la red en TCP/IP.
+Organizaciones que definen estándares abiertos para la capa de acceso a la red (física + enlace de datos):
+
+IEEE – Instituto de Ingenieros Eléctricos y Electrónicos
+ITU – Unión Internacional de Telecomunicaciones
+ISO – Organización Internacional para la Estandarización
+ANSI – Instituto Nacional Estadounidense de Estándares
+
+
+
+
+
+
+
+
+
